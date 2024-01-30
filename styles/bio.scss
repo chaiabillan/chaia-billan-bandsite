@@ -1,4 +1,4 @@
-@use “/partials/variables” as *;
+@use '../styles/partials/variables' as *;
 
 @font-face {
     font-family: 'Avenir Next Regular';
@@ -31,6 +31,8 @@
     font-weight: 700;
 }
 
+// should all these font styles be kept in a separate partial
+
 * {
     border: 1px red dotted;
 }
@@ -39,15 +41,19 @@ body {
     margin: 0px;
 }
 
+@mixin nav-bar-style {
+    color: $primary-white;
+    text-align: center;
+}
+
 .nav-bar {
-    background-color: variables.$primary-black;
+    background-color: $primary-black;
     margin: 0px;
 
     &__heading {
         font-size: 24px;
-        color: white;
         line-height: 32px;
-        text-align: center;
+        @include nav-bar-style;
     }
 
     &__subheading {
@@ -55,22 +61,29 @@ body {
         width: 100%;
     }
 
-    &__subheading--biography {
-        width: 50%;
-        text-align: center;
-        color: white;
-        font-size: 24px;
-        line-height: 32px;
-    }
-
+    &__subheading--biography,
     &__subheading--shows {
         width: 50%;
-        text-align: center;
-        color: white;
-        font-size: 24px;
-        line-height: 32px;
+        font-size: 14px;
+        line-height: 22px;
+        @include nav-bar-style;
     }
 }
 
 
 
+.hero {
+
+    &__image {
+        width: 100%;
+    }
+    
+    &__title {
+        color: $primary-white;
+        font-size: 24px;
+        line-height: 32px;
+        position: absolute;
+        top: 146px;
+        left: 10px;
+    }
+}

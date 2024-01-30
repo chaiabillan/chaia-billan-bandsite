@@ -45,25 +45,30 @@ body {
 }
 .nav-bar__heading {
   font-size: 24px;
-  color: white;
   line-height: 32px;
+  color: #FFFFFF;
   text-align: center;
 }
 .nav-bar__subheading {
   display: flex;
   width: 100%;
 }
-.nav-bar__subheading--biography {
+.nav-bar__subheading--biography, .nav-bar__subheading--shows {
   width: 50%;
+  font-size: 14px;
+  line-height: 22px;
+  color: #FFFFFF;
   text-align: center;
-  color: white;
-  font-size: 24px;
-  line-height: 32px;
 }
-.nav-bar__subheading--shows {
-  width: 50%;
-  text-align: center;
-  color: white;
+
+.hero__image {
+  width: 100%;
+}
+.hero__title {
+  color: #FFFFFF;
   font-size: 24px;
   line-height: 32px;
+  position: absolute;
+  top: 146px;
+  left: 10px;
 }/*# sourceMappingURL=bio.css.map */

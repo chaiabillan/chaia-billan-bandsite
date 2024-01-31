@@ -34,9 +34,9 @@
 
 // should all these font styles be kept in a separate partial
 
-* {
-    border: 1px red dotted;
-}
+// * {
+//     border: 1px red dotted;
+// }
 
 body {
     margin: 0px;
@@ -54,7 +54,7 @@ body {
         text-align: center;
         color: $primary-white;
     }
-    // this should be a link 
+    // this should be a logo from the assets and also a link
 
     &__subheading {
         display: flex;
@@ -97,7 +97,7 @@ body {
 
 .biography {
     padding-left: 16px;
-    padding-right: 16px;
+    padding-right: 28px;
 
     &__title {
         // padding: 24px 16px 16px 16px;
@@ -108,11 +108,13 @@ body {
 
     &__image {
         width: 100%;
-    }
 
         &--description {
-            @include subheader-mobile;
+            @include body-copy-mobile;
+            font-size: 13.5px;
+            line-height: 22px;
         }
+    }
     
     &__subtitle {
         @include subheader-mobile;
@@ -120,18 +122,110 @@ body {
 
     &__content {
         @include body-copy-mobile;
+        margin-bottom: 0px;
     }
 }
 
 .gallery {
     padding-left: 16px;
     padding-right: 16px;
-    margin: 0px;
+    background-color: $secondary-alabaster;
+    // margin: 0px; these arent helping
+
+    &__title {
+        @include page-header-section-header-mobile;
+        margin-bottom: 0px;
+        padding-top: 20px;
+        color: $primary-black;
+    }
 
     &__images {
         width: 100%;
-        padding-top: 16px;
-        padding-bottom: 16px;
-        margin: 0px;
+        padding-top: 6px;
+        padding-bottom: 6.5px;
+        // margin: 0px;
     }
+    // notice the small margins between each image - why 
+}
+
+.footer {
+    color: white;
+    background-color: $primary-black;
+    padding: 16px;
+
+    &__title {
+        @include page-header-section-header-mobile;
+    }
+
+    &__socials {
+        display: flex;
+
+        &--instagram {
+            width: 27px;
+            height: 26px;
+        }
+
+        &--facebook {
+            padding-left: 22px;
+            padding-right: 22px;
+            width: 15px;
+            height: 26px;
+        }
+
+        &--twitter {
+            width: 29px;
+            height: 26px;
+        }
+    }
+
+    &__bees-knees {
+        margin-top: 5px;
+        @include footer-copy-mobile;
+
+        &--location {
+            @include footer-copy-mobile;
+        }
+
+        &--email {
+            @include footer-copy-mobile;
+        }
+    }
+
+    &__limitless {
+        margin-top: 5px;
+        @include footer-copy-mobile;
+
+        &--location {
+            @include footer-copy-mobile;
+        }
+
+        &--email {
+            @include footer-copy-mobile;
+        }
+    }
+
+    &__arch {
+        margin-top: 5px;
+        @include footer-copy-mobile;
+
+        &--location {
+            @include footer-copy-mobile;
+            
+        }
+
+        &--email {
+            @include footer-copy-mobile;
+            padding-top: 3px;
+        }
+    }
+
+    &__logo {
+        padding-top: 31px;
+    }
+
+    &__copyright {
+        @include labels-buttons-mobile;
+        margin-top: 8px;
+    }
+
 }

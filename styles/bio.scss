@@ -1,4 +1,5 @@
 @use '../styles/partials/variables' as *;
+@use '../styles/partials/mixins' as *;
 
 @font-face {
     font-family: 'Avenir Next Regular';
@@ -41,20 +42,19 @@ body {
     margin: 0px;
 }
 
-@mixin nav-bar-style {
-    color: $primary-white;
-    text-align: center;
-}
+
 
 .nav-bar {
     background-color: $primary-black;
     margin: 0px;
 
     &__heading {
-        font-size: 24px;
-        line-height: 32px;
-        @include nav-bar-style;
+        @include page-header-section-header-mobile;
+        font-family: 'Avenir Next Regular';
+        text-align: center;
+        color: $primary-white;
     }
+    // this should be a link 
 
     &__subheading {
         display: flex;
@@ -66,7 +66,9 @@ body {
         width: 50%;
         font-size: 14px;
         line-height: 22px;
-        @include nav-bar-style;
+        text-align: center;
+        color: $primary-white;
+        @include subheader-mobile;
     }
 }
 
@@ -76,14 +78,60 @@ body {
 
     &__image {
         width: 100%;
+        position: relative;
+        height: 200px;
     }
     
     &__title {
         color: $primary-white;
-        font-size: 24px;
-        line-height: 32px;
-        position: absolute;
-        top: 146px;
+        top: 139px;
         left: 10px;
+        position: absolute;
+        // top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        @include page-header-section-header-mobile;
+    
+    }
+}
+
+.biography {
+    padding-left: 16px;
+    padding-right: 16px;
+
+    &__title {
+        // padding: 24px 16px 16px 16px;
+        padding-top: 24px;
+        padding-bottom: 16px;
+        @include page-header-section-header-mobile;
+    }
+
+    &__image {
+        width: 100%;
+    }
+
+        &--description {
+            @include subheader-mobile;
+        }
+    
+    &__subtitle {
+        @include subheader-mobile;
+    }
+
+    &__content {
+        @include body-copy-mobile;
+    }
+}
+
+.gallery {
+    padding-left: 16px;
+    padding-right: 16px;
+    margin: 0px;
+
+    &__images {
+        width: 100%;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        margin: 0px;
     }
 }

@@ -46,8 +46,9 @@ body {
 .nav-bar__heading {
   font-size: 24px;
   line-height: 32px;
-  color: #FFFFFF;
+  font-family: "Avenir Next Regular";
   text-align: center;
+  color: #FFFFFF;
 }
 .nav-bar__subheading {
   display: flex;
@@ -57,18 +58,61 @@ body {
   width: 50%;
   font-size: 14px;
   line-height: 22px;
-  color: #FFFFFF;
   text-align: center;
+  color: #FFFFFF;
+  font-size: 14px;
+  line-height: 22px;
 }
 
 .hero__image {
   width: 100%;
+  position: relative;
+  height: 200px;
 }
 .hero__title {
   color: #FFFFFF;
+  top: 139px;
+  left: 10px;
+  position: absolute;
+  transform: translateY(-50%);
   font-size: 24px;
   line-height: 32px;
-  position: absolute;
-  top: 146px;
-  left: 10px;
+}
+
+.biography {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.biography__title {
+  padding-top: 24px;
+  padding-bottom: 16px;
+  font-size: 24px;
+  line-height: 32px;
+}
+.biography__image {
+  width: 100%;
+}
+.biography--description {
+  font-size: 14px;
+  line-height: 22px;
+}
+.biography__subtitle {
+  font-size: 14px;
+  line-height: 22px;
+}
+.biography__content {
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.gallery {
+  padding-left: 16px;
+  padding-right: 16px;
+  margin: 0px;
+}
+.gallery__images {
+  width: 100%;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin: 0px;
 }/*# sourceMappingURL=bio.css.map */

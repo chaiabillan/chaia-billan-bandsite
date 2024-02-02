@@ -44,28 +44,36 @@ body {
 .nav-bar__heading {
   text-align: center;
   padding-top: 10px;
+  padding-bottom: 13px;
 }
 .nav-bar__subheading {
   display: flex;
   width: 100%;
 }
-.nav-bar__subheading--biography, .nav-bar__subheading--shows {
+.nav-bar__subheading--biography {
   width: 50%;
   font-size: 14px;
   line-height: 22px;
   text-align: center;
   color: #FFFFFF;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 22px;
+  border-bottom: 4px white solid;
+  padding-bottom: 7px;
+}
+.nav-bar__subheading--shows {
+  width: 50%;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+  color: #FFFFFF;
+  justify-content: center;
   font-size: 14px;
   line-height: 22px;
 }
-.nav-bar__subheading--biography {
-  border-bottom: white 3px solid;
-  padding-bottom: 21px;
-  width: 67px;
-}
-.nav-bar__subheading--shows {
-  position: relative;
-  right: 15px;
+.nav-bar__subheading--linkstyle {
+  text-decoration: none;
 }
 @media (min-width: 768px) {
   .nav-bar {
@@ -113,7 +121,7 @@ body {
   }
   .nav-bar__subheading--biography {
     font-family: "Avenir Next Demi";
-    border-bottom: white 6px solid;
+    border-bottom: white 3px solid;
   }
   .nav-bar__subheading--shows {
     left: 83px;
@@ -123,12 +131,12 @@ body {
 .hero__image {
   width: 100%;
   position: relative;
-  height: 200px;
+  height: 187px;
 }
 .hero__image--overlay {
   position: absolute;
-  height: 200px;
-  top: 55px;
+  height: 187px;
+  top: 79px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -452,6 +460,10 @@ body {
   margin-bottom: 15px;
   font-size: 13px;
   line-height: 18px;
+}
+.footer__email--link {
+  text-decoration: none;
+  color: white;
 }
 .footer__logo {
   padding-top: 35px;

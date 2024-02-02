@@ -85,33 +85,35 @@ body {
     padding-left: 38px;
   }
   .nav-bar__subheading {
-    padding-top: 4px;
-    display: flex;
+    padding-top: 1px;
     width: 114px;
   }
-  .nav-bar__subheading--biography, .nav-bar__subheading--shows {
+  .nav-bar__subheading--biography {
     position: relative;
+    font-family: "Avenir Next Demi";
     top: 21px;
     left: 60px;
-  }
-  .nav-bar__subheading--biography {
-    font-family: "Avenir Next Demi";
+    border-bottom: 3px white solid;
+    padding-bottom: 35px;
+    height: 10px;
   }
   .nav-bar__subheading--shows {
     position: relative;
     left: 122px;
+    top: 21px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .nav-bar {
-    height: 80px;
+    height: 85px;
   }
   .nav-bar__heading {
     padding-top: 31px;
     padding-left: 116px;
   }
   .nav-bar__subheading {
-    padding-top: 4px;
+    padding-top: 1px;
+    padding-bottom: 45px;
     display: flex;
     width: 114px;
   }
@@ -168,16 +170,16 @@ body {
     left: 40px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .hero__image {
-    height: 592px;
+    height: 628px;
   }
   .hero__image--overlay {
-    top: 79px;
-    height: 592px;
+    top: 85px;
+    height: 628px;
   }
   .hero__title {
-    top: 230px;
+    top: 238px;
     left: 103px;
   }
 }
@@ -251,7 +253,7 @@ body {
   }
   .biography__image--description--text {
     font-size: 23px;
-    line-height: 31px;
+    line-height: 32px;
     font-family: "Avenir Next Demi";
   }
   .biography__image--description--signature {
@@ -262,8 +264,8 @@ body {
   .biography__subtitle {
     font-size: 24px;
     line-height: 32px;
-    padding-top: 32px;
-    padding-bottom: 0px;
+    padding-top: 36px;
+    padding-bottom: 4px;
     font-family: "Avenir Next Demi";
   }
   .biography__content {
@@ -283,7 +285,7 @@ body {
     line-height: 23.2px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .biography {
     padding-left: 87px;
     padding-right: 87px;
@@ -298,9 +300,8 @@ body {
     font-size: 34px;
   }
   .biography__image {
-    height: 423px;
-    padding-left: 117px;
-    padding-right: 117px;
+    height: 454px;
+    padding: 0px 117px 10px 117px;
     width: 77%;
   }
   .biography__image--description {
@@ -339,13 +340,13 @@ body {
     font-size: 14px;
     line-height: 22px;
     padding-right: 2px;
-    line-height: 19.2px;
+    line-height: 23px;
   }
   .biography__content--right {
     font-size: 14px;
     line-height: 22px;
     padding-left: 24.5px;
-    line-height: 19.2px;
+    line-height: 23px;
   }
 }
 
@@ -387,7 +388,7 @@ body {
     padding: 11px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .gallery {
     padding: 26px 112px 16px 112px;
   }
@@ -418,6 +419,9 @@ body {
   display: flex;
   flex-direction: column;
 }
+.footer__contacts--padding {
+  padding-top: 1px;
+}
 .footer__title {
   font-size: 24px;
   line-height: 32px;
@@ -427,6 +431,7 @@ body {
 .footer__socials {
   display: flex;
   margin-top: 4px;
+  margin-bottom: -2px;
 }
 .footer__socials--instagram {
   width: 22px;
@@ -460,7 +465,7 @@ body {
   font-size: 13px;
   line-height: 18px;
 }
-.footer__email--link {
+.footer__link {
   text-decoration: none;
   color: white;
 }
@@ -490,8 +495,7 @@ body {
   }
   .footer__socials {
     position: relative;
-    top: 7px;
-    left: 40px;
+    left: 35px;
   }
   .footer__contacts {
     display: flex;
@@ -516,6 +520,9 @@ body {
     padding-top: 17px;
     padding-bottom: 16px;
   }
+  .footer__arch--title {
+    margin-top: 4px;
+  }
   .footer__logo {
     position: absolute;
     left: 617px;
@@ -526,7 +533,7 @@ body {
     line-height: 20px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .footer {
     padding: 19px;
     height: 311px;
@@ -543,8 +550,8 @@ body {
   }
   .footer__socials {
     position: relative;
-    top: 7px;
-    left: 40px;
+    top: 0px;
+    left: 57px;
   }
   .footer__contacts {
     display: flex;
@@ -553,6 +560,9 @@ body {
     width: 718px;
     font-size: 14px;
     line-height: 20px;
+  }
+  .footer__contacts--padding {
+    padding-top: 13px;
   }
   .footer__bees-knees--location {
     padding-top: 17px;

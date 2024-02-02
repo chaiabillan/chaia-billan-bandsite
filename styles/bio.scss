@@ -64,31 +64,29 @@ body {
         }
 
         &__subheading {
-            padding-top: 4px;
-            display: flex;
+            padding-top: 1px;
             width: 114px;
 
-            &--biography,
-            &--shows {
+            &--biography {
                 position: relative;
+                font-family: 'Avenir Next Demi';
                 top: 21px;
                 left: 60px;
-            }
-
-            &--biography {
-                font-family: 'Avenir Next Demi';
-                
+                border-bottom: 3px white solid;
+                padding-bottom: 35px;
+                height: 10px;
             }
 
             &--shows {
                 position: relative;
                 left: 122px;
+                top: 21px;
             }
         }
     }
 
     @include desktop {
-        height: 80px;
+        height: 85px;
 
         &__heading {
             padding-top: 31px;
@@ -96,7 +94,8 @@ body {
         }
 
         &__subheading {
-            padding-top: 4px;
+            padding-top: 1px;
+            padding-bottom: 45px;
             display: flex;
             width: 114px;
 
@@ -170,16 +169,16 @@ body {
     @include desktop {
 
         &__image {
-            height: 592px;
+            height: 628px;
 
             &--overlay {
-                top: 79px;
-                height: 592px;
+                top: 85px;
+                height: 628px;
             }
         }
 
         &__title {
-            top: 230px;
+            top: 238px;
             left: 103px;
         }
     }
@@ -257,7 +256,7 @@ body {
 
                 &--text {
                     font-size: 23px;
-                    line-height: 31px;
+                    line-height: 32px;
                     font-family: 'Avenir Next Demi';
                 }
 
@@ -270,8 +269,8 @@ body {
 
         &__subtitle {
             @include subheader-desktop;
-            padding-top: 32px;
-            padding-bottom: 0px;
+            padding-top: 36px;
+            padding-bottom: 4px;
 
             font-family: 'Avenir Next Demi';
         }
@@ -310,9 +309,8 @@ body {
         }
 
         &__image {
-            height: 423px;
-            padding-left: 117px;
-            padding-right: 117px;
+            height: 454px;
+            padding: 0px 117px 10px 117px;
             width: 77%;
 
             &--description {
@@ -354,13 +352,13 @@ body {
            &--left {
             @include body-copy-desktop;
             padding-right: 2px;
-            line-height: 19.2px;
+            line-height: 23px;
            }
 
            &--right {
             @include body-copy-desktop;
             padding-left: 24.5px;
-            line-height: 19.2px;
+            line-height: 23px;
            }
         }
     }
@@ -438,6 +436,10 @@ body {
     display: flex;
     flex-direction: column;
 
+    &__contacts--padding {
+        padding-top: 1px;
+    }
+
     &__title {
         @include page-header-section-header-mobile;
         margin-bottom: 11px;
@@ -447,6 +449,7 @@ body {
     &__socials {
         display: flex;
         margin-top: 4px;
+        margin-bottom: -2px;
 
         &--instagram {
             width: 22px;
@@ -485,7 +488,7 @@ body {
         @include footer-copy-mobile;
     }
 
-    &__email--link {
+    &__link {
         text-decoration: none;
         color: white;
     }
@@ -517,8 +520,7 @@ body {
 
         &__socials {
             position: relative;
-            top: 7px;
-            left: 40px;
+            left: 35px;
         }
 
         &__contacts {
@@ -552,6 +554,10 @@ body {
                 padding-top: 17px;
                 padding-bottom: 16px;
             }
+
+            &--title {
+                margin-top: 4px;
+            }
         }
 
         &__logo {
@@ -582,8 +588,8 @@ body {
 
         &__socials {
             position: relative;
-            top: 7px;
-            left: 40px;
+            top: 0px;
+            left: 57px;
         }
 
         &__contacts {
@@ -591,7 +597,11 @@ body {
             justify-content: space-between;
             align-items: center;
             width: 718px;
-            @include footer-copy-desktop
+            @include footer-copy-desktop;
+
+            &--padding {
+                padding-top: 13px;
+            }
         } 
 
         &__bees-knees {
@@ -638,12 +648,11 @@ body {
 // questions for openstudio
 
 // are the images supposed to stretch when i increase screen width?
-// how do i get that bandsite logo to say in one place?
-// should i put font-faces in separate files
+// how do i get that bandsite logo to say in one place? --> have to add link to this as well
 
 // can do myself
-// add links to footer -- emails, apple maps
-// add link to bandsite logo at top to link to home page 
 // change everything to rem?
 // delete all redundant aspects of the desktop mixins
-//maybe change bio to article tag
+
+// maybe
+// change bio to article tag

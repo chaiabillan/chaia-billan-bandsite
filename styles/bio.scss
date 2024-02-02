@@ -96,22 +96,18 @@ body {
         &__subheading {
             padding-top: 1px;
             padding-bottom: 45px;
-            display: flex;
             width: 114px;
-
-            &--biography,
-            &--shows {
-                top: 25px;
-                left: 54px;
-            }
 
             &--biography {
                 font-family: 'Avenir Next Demi';
                 border-bottom: white 3px solid;
+                top: 25px;
+                left: 54px;
             }
 
             &--shows {
                 left: 83px;
+                top: 25px;
             }
         }
     }
@@ -271,7 +267,6 @@ body {
             @include subheader-desktop;
             padding-top: 36px;
             padding-bottom: 4px;
-
             font-family: 'Avenir Next Demi';
         }
 
@@ -294,16 +289,8 @@ body {
     }
 
     @include desktop {
-        padding-left: 87px;
-        padding-right: 87px;
-        
 
         &__title {
-            
-            @include section-header-desktop;
-            padding-top: 48px;
-            padding-bottom: 27px;
-            position: relative;
             left: 32px;
             font-size: 34px;
         }
@@ -314,7 +301,6 @@ body {
             width: 77%;
 
             &--description {
-                padding-top: 7px;
                 padding-left: 117px;
                 padding-right: 117px;
                 width: 61%;
@@ -323,23 +309,15 @@ body {
                 &--text {
                     font-size: 21px;
                     line-height: 31px;
-                    font-family: 'Avenir Next Demi';
-                }
-
-                &--signature {
-                    @include body-copy-desktop;
-                    padding-top: 12px;
                 }
             }
         }
 
         &__subtitle {
-            @include subheader-desktop;
             padding-top: 32px;
             padding-bottom: 0px;
             position: relative;
             left: 116px;
-            font-family: 'Avenir Next Demi';
         }
 
         &__content {
@@ -350,15 +328,11 @@ body {
             width: 83%;
 
            &--left {
-            @include body-copy-desktop;
             padding-right: 2px;
-            line-height: 23px;
            }
 
            &--right {
-            @include body-copy-desktop;
             padding-left: 24.5px;
-            line-height: 23px;
            }
         }
     }
@@ -408,26 +382,16 @@ body {
         padding: 26px 112px 16px 112px;
 
         &__title {
-            @include section-header-desktop;
-            padding-bottom: 12px;
-            margin-top: 0px;
             position: relative;
             left: 9px;
         }
 
-        &__images {
-            display: flex;
-            flex-wrap: wrap;
-            width: 100%;
-            justify-content: space-between;
-
             &--individual {
                 width: 31%;
-                padding: 11px;
             }
         }
     }
-}
+
 
 .footer {
     color: white;
@@ -493,9 +457,18 @@ body {
         color: white;
     }
 
+    &
+
     &__logo {
-        padding-top: 35px;
-        padding-bottom: 5px;
+
+        &--top {
+            display: none;
+        }
+
+        &--bottom {
+            padding-top: 35px;
+            padding-bottom: 5px;
+        }
     }
 
     &__copyright {
@@ -511,7 +484,8 @@ body {
         &__title__socials {
             display: flex;
             padding-top: 8px;
-            align-items: center
+            align-items: center;
+            justify-content: space-between;
         }
 
         &__title {
@@ -561,9 +535,17 @@ body {
         }
 
         &__logo {
-            position: absolute;
-            left: 617px;
-            bottom: -1304px;
+
+            &--top {
+                display: flex !important;
+                flex-direction: row;
+            }
+    
+            &--bottom {
+                padding-top: 35px;
+                padding-bottom: 5px;
+                display: none
+            }
         }
 
         &__copyright {
@@ -573,71 +555,32 @@ body {
 
     @include desktop {
         padding: 19px;
-        height: 311px;
+        height: 339px;
         padding-left: 128px;
 
-        &__title__socials {
-            display: flex;
-            padding-top: 9px;
-            align-items: center
+        &__content {
+            padding-right: 117px;
         }
 
-        &__title {
-            @include section-header-desktop;
+        &__title__socials {
+            padding-top: 9px;
         }
 
         &__socials {
-            position: relative;
             top: 0px;
             left: 57px;
         }
 
         &__contacts {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
             width: 718px;
-            @include footer-copy-desktop;
 
             &--padding {
                 padding-top: 13px;
             }
         } 
 
-        &__bees-knees {
-
-            &--location {
-                padding-top: 17px;
-                padding-bottom: 16px;
-            }
-        }
-
         &__limitless {
-            position: relative;
             bottom: 1px;
-
-            &--location {
-                padding-top: 17px;
-                padding-bottom: 16px;
-            }
-        }
-
-        &__arch {
-
-            &--location {
-                padding-top: 17px;
-                padding-bottom: 16px;
-            }
-        }
-
-        &__logo {
-            position: absolute;
-            left: 617px;
-            bottom: -1304px;
-        }
-
-        &__copyright {
-            @include footer-copy-desktop
         }
     }
 }
@@ -648,11 +591,10 @@ body {
 // questions for openstudio
 
 // are the images supposed to stretch when i increase screen width?
-// how do i get that bandsite logo to say in one place? --> have to add link to this as well
 
 // can do myself
 // change everything to rem?
-// delete all redundant aspects of the desktop mixins
+// change all the padding and margins to concise format
 
 // maybe
 // change bio to article tag

@@ -114,19 +114,17 @@ body {
   .nav-bar__subheading {
     padding-top: 1px;
     padding-bottom: 45px;
-    display: flex;
     width: 114px;
-  }
-  .nav-bar__subheading--biography, .nav-bar__subheading--shows {
-    top: 25px;
-    left: 54px;
   }
   .nav-bar__subheading--biography {
     font-family: "Avenir Next Demi";
     border-bottom: white 3px solid;
+    top: 25px;
+    left: 54px;
   }
   .nav-bar__subheading--shows {
     left: 83px;
+    top: 25px;
   }
 }
 
@@ -286,16 +284,7 @@ body {
   }
 }
 @media (min-width: 1280px) {
-  .biography {
-    padding-left: 87px;
-    padding-right: 87px;
-  }
   .biography__title {
-    font-size: 36px;
-    line-height: 44px;
-    padding-top: 48px;
-    padding-bottom: 27px;
-    position: relative;
     left: 32px;
     font-size: 34px;
   }
@@ -305,7 +294,6 @@ body {
     width: 77%;
   }
   .biography__image--description {
-    padding-top: 7px;
     padding-left: 117px;
     padding-right: 117px;
     width: 61%;
@@ -313,21 +301,12 @@ body {
   .biography__image--description--text {
     font-size: 21px;
     line-height: 31px;
-    font-family: "Avenir Next Demi";
-  }
-  .biography__image--description--signature {
-    font-size: 14px;
-    line-height: 22px;
-    padding-top: 12px;
   }
   .biography__subtitle {
-    font-size: 24px;
-    line-height: 32px;
     padding-top: 32px;
     padding-bottom: 0px;
     position: relative;
     left: 116px;
-    font-family: "Avenir Next Demi";
   }
   .biography__content {
     display: flex;
@@ -337,16 +316,10 @@ body {
     width: 83%;
   }
   .biography__content--left {
-    font-size: 14px;
-    line-height: 22px;
     padding-right: 2px;
-    line-height: 23px;
   }
   .biography__content--right {
-    font-size: 14px;
-    line-height: 22px;
     padding-left: 24.5px;
-    line-height: 23px;
   }
 }
 
@@ -393,22 +366,11 @@ body {
     padding: 26px 112px 16px 112px;
   }
   .gallery__title {
-    font-size: 36px;
-    line-height: 44px;
-    padding-bottom: 12px;
-    margin-top: 0px;
     position: relative;
     left: 9px;
   }
-  .gallery__images {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: space-between;
-  }
-  .gallery__images--individual {
+  .gallery--individual {
     width: 31%;
-    padding: 11px;
   }
 }
 
@@ -469,7 +431,10 @@ body {
   text-decoration: none;
   color: white;
 }
-.footer__logo {
+.footer .footer__logo--top {
+  display: none;
+}
+.footer .footer__logo--bottom {
   padding-top: 35px;
   padding-bottom: 5px;
 }
@@ -488,6 +453,7 @@ body {
     display: flex;
     padding-top: 8px;
     align-items: center;
+    justify-content: space-between;
   }
   .footer__title {
     font-size: 36px;
@@ -523,10 +489,14 @@ body {
   .footer__arch--title {
     margin-top: 4px;
   }
-  .footer__logo {
-    position: absolute;
-    left: 617px;
-    bottom: -1304px;
+  .footer__logo--top {
+    display: flex !important;
+    flex-direction: row;
+  }
+  .footer__logo--bottom {
+    padding-top: 35px;
+    padding-bottom: 5px;
+    display: none;
   }
   .footer__copyright {
     font-size: 14px;
@@ -536,57 +506,26 @@ body {
 @media (min-width: 1280px) {
   .footer {
     padding: 19px;
-    height: 311px;
+    height: 339px;
     padding-left: 128px;
   }
-  .footer__title__socials {
-    display: flex;
-    padding-top: 9px;
-    align-items: center;
+  .footer__content {
+    padding-right: 117px;
   }
-  .footer__title {
-    font-size: 36px;
-    line-height: 44px;
+  .footer__title__socials {
+    padding-top: 9px;
   }
   .footer__socials {
-    position: relative;
     top: 0px;
     left: 57px;
   }
   .footer__contacts {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     width: 718px;
-    font-size: 14px;
-    line-height: 20px;
   }
   .footer__contacts--padding {
     padding-top: 13px;
   }
-  .footer__bees-knees--location {
-    padding-top: 17px;
-    padding-bottom: 16px;
-  }
   .footer__limitless {
-    position: relative;
     bottom: 1px;
-  }
-  .footer__limitless--location {
-    padding-top: 17px;
-    padding-bottom: 16px;
-  }
-  .footer__arch--location {
-    padding-top: 17px;
-    padding-bottom: 16px;
-  }
-  .footer__logo {
-    position: absolute;
-    left: 617px;
-    bottom: -1304px;
-  }
-  .footer__copyright {
-    font-size: 14px;
-    line-height: 20px;
   }
 }/*# sourceMappingURL=bio.css.map */

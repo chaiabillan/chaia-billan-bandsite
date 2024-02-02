@@ -1,6 +1,7 @@
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
 
+
 @font-face {
     font-family: 'Avenir Next Regular';
     src: url("../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
@@ -47,22 +48,21 @@ body {
 .nav-bar {
     background-color: $primary-black;
     margin: 0px;
+    display: flex;
+    flex-direction: column;
 
     &__heading {
-        @include page-header-section-header-mobile;
-        font-family: 'Avenir Next Regular';
         text-align: center;
-        color: $primary-white;
+        padding-top: 10px;
     }
     // this should be a logo from the assets and also a link
 
     &__subheading {
         display: flex;
         width: 100%;
-    }
 
-    &__subheading--biography,
-    &__subheading--shows {
+        &--biography,
+        &--shows {
         width: 50%;
         font-size: 14px;
         line-height: 22px;
@@ -70,59 +70,212 @@ body {
         color: $primary-white;
         @include subheader-mobile;
     }
+    }
+
+    
+
+    @include tablet {
+        flex-direction: row;
+        height: 72px;
+
+        &__heading {
+            padding-top: 27px;
+            padding-left: 38px;
+            // width: 30px;
+            // height: 15px;
+        }
+
+        &__subheading {
+            padding-top: 4px;
+            display: flex;
+            width: 114px;
+
+            &--biography,
+            &--shows {
+                position: relative;
+                top: 21px;
+                left: 60px;
+            }
+
+            &--biography {
+                font-family: 'Avenir Next Demi';
+                border-bottom: white 6px solid;
+                // why isnt this border working 
+            }
+
+            &--shows {
+                position: relative;
+                left: 122px;
+            }
+        }
+    }
 }
 
 
 
 .hero {
 
+    
+
     &__image {
         width: 100%;
         position: relative;
         height: 200px;
+
+        &--overlay {
+            position: absolute;
+            height: 200px;
+            top: 55px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(50, 50, 50, 0.5);
+            z-index: 1;
+        }
     }
     
     &__title {
         color: $primary-white;
-        top: 139px;
+        top: 72px;
         left: 10px;
         position: absolute;
         // top: 50%;
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
         @include page-header-section-header-mobile;
-    
+        z-index: 2;
+    }
+
+    @include tablet {
+
+        &__image {
+            height: 449px;
+
+            &--overlay {
+                top: 72px;
+                height: 449px;
+            }
+        }
+
+        &__title {
+            @include page-header-desktop;
+            top: 157px;
+            left: 40px;
+        }
     }
 }
 
 .biography {
     padding-left: 16px;
     padding-right: 28px;
+    margin: 0px;
 
     &__title {
         // padding: 24px 16px 16px 16px;
         padding-top: 24px;
         padding-bottom: 16px;
+        color: $primary-black;
         @include page-header-section-header-mobile;
     }
 
     &__image {
         width: 100%;
+        height: 157px;
+        
+        // theres a little margin under this for some reason, getting rid of the div didnt fix the problem
 
         &--description {
             @include body-copy-mobile;
             font-size: 13.5px;
             line-height: 22px;
-        }
+            color: $primary-black;
+
+            &--text {
+                margin-bottom: 5px;
+                padding-top: 16px;
+                margin: 0px;
+                color: $primary-black;
+            }
+
+            &--signature {
+                padding-top: 4px;
+                padding-bottom: 17px;
+                margin: 0px;
+                color: $primary-black;
+            }
+        } 
     }
     
     &__subtitle {
         @include subheader-mobile;
+        margin: 0px;
+        padding-bottom: 11px;
+        color: $primary-black;
     }
 
     &__content {
         @include body-copy-mobile;
-        margin-bottom: 0px;
+        margin: 0px;
+        color: $primary-black;
+        padding-top: 10px;
+    }
+
+    @include tablet {
+        padding-left: 87px;
+        padding-right: 87px;
+
+        &__title {
+            
+            @include section-header-desktop;
+            padding-top: 48px;
+            padding-bottom: 27px;
+            position: relative;
+            right: 58px;
+        }
+
+        &__image {
+            height: 307px;
+
+            &--description {
+                padding-top: 7px;
+
+                &--text {
+                    font-size: 23px;
+                    line-height: 31px;
+                    font-family: 'Avenir Next Demi';
+                }
+
+                &--signature {
+                    @include body-copy-desktop;
+                    padding-top: 12px;
+                }
+            }
+        }
+
+        &__subtitle {
+            @include subheader-desktop;
+            padding-top: 32px;
+            padding-bottom: 0px;
+
+            font-family: 'Avenir Next Demi';
+        }
+
+        &__content {
+            display: flex;
+
+           &--left {
+            @include body-copy-desktop;
+            padding-right: 19px;
+            line-height: 23.2px;
+           }
+           &--right {
+            @include body-copy-desktop;
+            padding-left: 28px;
+            line-height: 23.2px;
+           }
+        }
+        //maybe make side margins on section bigger
+        //just make sure that all the words in this section line up with mockup before submitting 
     }
 }
 
@@ -144,88 +297,150 @@ body {
         padding-top: 6px;
         padding-bottom: 6.5px;
         // margin: 0px;
+        // height: 200px;
     }
     // notice the small margins between each image - why 
+    @include tablet {
+        
+        &__title {
+            @include section-header-desktop;
+            padding-top: 46px;
+            padding-bottom: 7px;
+        }
+
+        &__images {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: space-between;
+            // margin: 5px;
+            // align-items: center;
+            // so the space between the 3 columns gets bigger when i increase desktop size so it needs to be responsive
+            
+
+            &--individual {
+                width: 28%;
+                padding: 11px;
+                // justify-content: space-around;
+            }
+            //whats the best way to align all these photos
+
+            // &--middle {
+            //     padding: 10px;
+            // }
+        }
+    }
 }
 
 .footer {
     color: white;
     background-color: $primary-black;
     padding: 16px;
+    display: flex;
+    flex-direction: column;
 
     &__title {
         @include page-header-section-header-mobile;
+        margin-bottom: 11px;
+        margin-top: 8px;
     }
 
     &__socials {
         display: flex;
+        // padding-top: 10px;
+        margin-top: 4px;
 
         &--instagram {
-            width: 27px;
+            width: 22px;
             height: 26px;
         }
 
         &--facebook {
-            padding-left: 22px;
-            padding-right: 22px;
-            width: 15px;
-            height: 26px;
+            padding-left: 30px;
+            padding-right: 30px;
+            width: 12px;
+            height: 24px;
         }
 
         &--twitter {
-            width: 29px;
+            width: 27px;
             height: 26px;
         }
     }
 
     &__bees-knees {
-        margin-top: 5px;
+        margin-top: 8px;
+        margin-bottom: 15px;
         @include footer-copy-mobile;
 
-        &--location {
-            @include footer-copy-mobile;
-        }
 
-        &--email {
-            @include footer-copy-mobile;
-        }
+    
     }
 
     &__limitless {
-        margin-top: 5px;
+        margin-top: 14px;
+        margin-bottom: 15px;
         @include footer-copy-mobile;
-
-        &--location {
-            @include footer-copy-mobile;
-        }
-
-        &--email {
-            @include footer-copy-mobile;
-        }
     }
 
     &__arch {
-        margin-top: 5px;
+        margin-top: 12px;
+        margin-bottom: 15px;
         @include footer-copy-mobile;
-
-        &--location {
-            @include footer-copy-mobile;
-            
-        }
-
-        &--email {
-            @include footer-copy-mobile;
-            padding-top: 3px;
-        }
     }
 
     &__logo {
-        padding-top: 31px;
+        padding-top: 35px;
+        padding-bottom: 5px;
     }
 
     &__copyright {
         @include labels-buttons-mobile;
         margin-top: 8px;
+        margin-bottom: 6px;
     }
 
+    @include tablet {
+        // margin: 27px;
+        padding: 30px;
+        height: 311px;
+
+        &__title__socials {
+            display: flex;
+            padding-top: 10px;
+            align-items: center
+        }
+
+        &__title {
+            @include section-header-desktop;
+
+        }
+
+        &__socials {
+            position: relative;
+            top: 7px;
+            left: 40px;
+        }
+
+        &__contacts {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            // height: 30px;
+            @include footer-copy-desktop
+        } 
+        // more space between the 3 lines for each 
+
+        &__logo {
+            position: absolute;
+            left: 617px;
+            bottom: -1304px;
+// this keeps moving around when i increase screen size so fix it
+        }
+
+        &__copyright {
+            @include footer-copy-desktop
+        }
+        
+    }
 }

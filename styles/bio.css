@@ -38,13 +38,12 @@ body {
 .nav-bar {
   background-color: #323232;
   margin: 0px;
+  display: flex;
+  flex-direction: column;
 }
 .nav-bar__heading {
-  font-size: 24px;
-  line-height: 32px;
-  font-family: "Avenir Next Regular";
   text-align: center;
-  color: #FFFFFF;
+  padding-top: 10px;
 }
 .nav-bar__subheading {
   display: flex;
@@ -59,49 +58,176 @@ body {
   font-size: 14px;
   line-height: 22px;
 }
+@media (min-width: 768px) {
+  .nav-bar {
+    flex-direction: row;
+    height: 72px;
+  }
+  .nav-bar__heading {
+    padding-top: 27px;
+    padding-left: 38px;
+  }
+  .nav-bar__subheading {
+    padding-top: 4px;
+    display: flex;
+    width: 114px;
+  }
+  .nav-bar__subheading--biography, .nav-bar__subheading--shows {
+    position: relative;
+    top: 21px;
+    left: 60px;
+  }
+  .nav-bar__subheading--biography {
+    font-family: "Avenir Next Demi";
+    border-bottom: white 6px solid;
+  }
+  .nav-bar__subheading--shows {
+    position: relative;
+    left: 122px;
+  }
+}
 
 .hero__image {
   width: 100%;
   position: relative;
   height: 200px;
 }
+.hero__image--overlay {
+  position: absolute;
+  height: 200px;
+  top: 55px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(50, 50, 50, 0.5);
+  z-index: 1;
+}
 .hero__title {
   color: #FFFFFF;
-  top: 139px;
+  top: 72px;
   left: 10px;
   position: absolute;
   transform: translateY(-50%);
   font-size: 24px;
   line-height: 32px;
+  z-index: 2;
+}
+@media (min-width: 768px) {
+  .hero__image {
+    height: 449px;
+  }
+  .hero__image--overlay {
+    top: 72px;
+    height: 449px;
+  }
+  .hero__title {
+    font-size: 60px;
+    line-height: 68px;
+    top: 157px;
+    left: 40px;
+  }
 }
 
 .biography {
   padding-left: 16px;
   padding-right: 28px;
+  margin: 0px;
 }
 .biography__title {
   padding-top: 24px;
   padding-bottom: 16px;
+  color: #323232;
   font-size: 24px;
   line-height: 32px;
 }
 .biography__image {
   width: 100%;
+  height: 157px;
 }
 .biography__image--description {
   font-size: 13px;
   line-height: 18px;
   font-size: 13.5px;
   line-height: 22px;
+  color: #323232;
+}
+.biography__image--description--text {
+  margin-bottom: 5px;
+  padding-top: 16px;
+  margin: 0px;
+  color: #323232;
+}
+.biography__image--description--signature {
+  padding-top: 4px;
+  padding-bottom: 17px;
+  margin: 0px;
+  color: #323232;
 }
 .biography__subtitle {
   font-size: 14px;
   line-height: 22px;
+  margin: 0px;
+  padding-bottom: 11px;
+  color: #323232;
 }
 .biography__content {
   font-size: 13px;
   line-height: 18px;
-  margin-bottom: 0px;
+  margin: 0px;
+  color: #323232;
+  padding-top: 10px;
+}
+@media (min-width: 768px) {
+  .biography {
+    padding-left: 87px;
+    padding-right: 87px;
+  }
+  .biography__title {
+    font-size: 36px;
+    line-height: 44px;
+    padding-top: 48px;
+    padding-bottom: 27px;
+    position: relative;
+    right: 58px;
+  }
+  .biography__image {
+    height: 307px;
+  }
+  .biography__image--description {
+    padding-top: 7px;
+  }
+  .biography__image--description--text {
+    font-size: 23px;
+    line-height: 31px;
+    font-family: "Avenir Next Demi";
+  }
+  .biography__image--description--signature {
+    font-size: 14px;
+    line-height: 22px;
+    padding-top: 12px;
+  }
+  .biography__subtitle {
+    font-size: 24px;
+    line-height: 32px;
+    padding-top: 32px;
+    padding-bottom: 0px;
+    font-family: "Avenir Next Demi";
+  }
+  .biography__content {
+    display: flex;
+  }
+  .biography__content--left {
+    font-size: 14px;
+    line-height: 22px;
+    padding-right: 19px;
+    line-height: 23.2px;
+  }
+  .biography__content--right {
+    font-size: 14px;
+    line-height: 22px;
+    padding-left: 28px;
+    line-height: 23.2px;
+  }
 }
 
 .gallery {
@@ -121,78 +247,117 @@ body {
   padding-top: 6px;
   padding-bottom: 6.5px;
 }
+@media (min-width: 768px) {
+  .gallery__title {
+    font-size: 36px;
+    line-height: 44px;
+    padding-top: 46px;
+    padding-bottom: 7px;
+  }
+  .gallery__images {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .gallery__images--individual {
+    width: 28%;
+    padding: 11px;
+  }
+}
 
 .footer {
   color: white;
   background-color: #323232;
   padding: 16px;
+  display: flex;
+  flex-direction: column;
 }
 .footer__title {
   font-size: 24px;
   line-height: 32px;
+  margin-bottom: 11px;
+  margin-top: 8px;
 }
 .footer__socials {
   display: flex;
+  margin-top: 4px;
 }
 .footer__socials--instagram {
-  width: 27px;
+  width: 22px;
   height: 26px;
 }
 .footer__socials--facebook {
-  padding-left: 22px;
-  padding-right: 22px;
-  width: 15px;
-  height: 26px;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 12px;
+  height: 24px;
 }
 .footer__socials--twitter {
-  width: 29px;
+  width: 27px;
   height: 26px;
 }
 .footer__bees-knees {
-  margin-top: 5px;
-  font-size: 13px;
-  line-height: 18px;
-}
-.footer__bees-knees--location {
-  font-size: 13px;
-  line-height: 18px;
-}
-.footer__bees-knees--email {
+  margin-top: 8px;
+  margin-bottom: 15px;
   font-size: 13px;
   line-height: 18px;
 }
 .footer__limitless {
-  margin-top: 5px;
-  font-size: 13px;
-  line-height: 18px;
-}
-.footer__limitless--location {
-  font-size: 13px;
-  line-height: 18px;
-}
-.footer__limitless--email {
+  margin-top: 14px;
+  margin-bottom: 15px;
   font-size: 13px;
   line-height: 18px;
 }
 .footer__arch {
-  margin-top: 5px;
+  margin-top: 12px;
+  margin-bottom: 15px;
   font-size: 13px;
   line-height: 18px;
-}
-.footer__arch--location {
-  font-size: 13px;
-  line-height: 18px;
-}
-.footer__arch--email {
-  font-size: 13px;
-  line-height: 18px;
-  padding-top: 3px;
 }
 .footer__logo {
-  padding-top: 31px;
+  padding-top: 35px;
+  padding-bottom: 5px;
 }
 .footer__copyright {
   font-size: 10px;
   line-height: 20px;
   margin-top: 8px;
+  margin-bottom: 6px;
+}
+@media (min-width: 768px) {
+  .footer {
+    padding: 30px;
+    height: 311px;
+  }
+  .footer__title__socials {
+    display: flex;
+    padding-top: 10px;
+    align-items: center;
+  }
+  .footer__title {
+    font-size: 36px;
+    line-height: 44px;
+  }
+  .footer__socials {
+    position: relative;
+    top: 7px;
+    left: 40px;
+  }
+  .footer__contacts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .footer__logo {
+    position: absolute;
+    left: 617px;
+    bottom: -1304px;
+  }
+  .footer__copyright {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }/*# sourceMappingURL=bio.css.map */

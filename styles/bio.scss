@@ -1,39 +1,6 @@
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
-
-
-@font-face {
-    font-family: 'Avenir Next Regular';
-    src: url("../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
-    src: url("../assets/fonts/Alternative\ files/AvenirNextLTPro-Regular") format();
-    font-weight: 400;
-}
-.normal {
-    font-family: 'Avenir Next Regular';
-    font-weight: 400;
-}
-@font-face {
-    font-family: 'Avenir Next Demi';
-    src: url("../assets/fonts/AvenirNextLTPro-Demi.otf") format("opentype");
-    src: url("../assets/fonts/Alternative\ files/AvenirNextLTPro-Demi") format();
-    font-weight: 600;
-}
-.demi {
-    font-family: 'Avenir Next Demi';
-    font-weight: 600;
-}
-@font-face {
-    font-family: 'Avenir Next Bold';
-    src: url("../assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype");
-    src: url("../assets/fonts/Alternative\ files/AvenirNextLTPro-Bold") format();
-    font-weight: 700;
-}
-.bold {
-    font-family: 'Avenir Next Bold';
-    font-weight: 700;
-}
-
-// should all these font styles be kept in a separate partial
+@use '../styles/partials/fonts' as *;
 
 // * {
 //     border: 1px red dotted;
@@ -42,8 +9,6 @@
 body {
     margin: 0px;
 }
-
-
 
 .nav-bar {
     background-color: $primary-black;
@@ -226,8 +191,8 @@ body {
     margin: 0px;
 
     &__title {
-        padding-top: 24px;
-        padding-bottom: 16px;
+        padding-top: 13px;
+        padding-bottom: 12px;
         color: $primary-black;
         @include page-header-section-header-mobile;
     }
@@ -261,15 +226,14 @@ body {
     &__subtitle {
         @include subheader-mobile;
         margin: 0px;
-        padding-bottom: 11px;
-        color: $primary-black;
+        color: $secondary-dark-black;
     }
 
     &__content {
         @include body-copy-mobile;
         margin: 0px;
         color: $primary-black;
-        padding-top: 10px;
+        padding-top: 7px;
     }
 
     @include tablet {
@@ -675,7 +639,6 @@ body {
 
 // are the images supposed to stretch when i increase screen width?
 // how do i get that bandsite logo to say in one place?
-// how to underline the biography in nav bar
 // should i put font-faces in separate files
 
 // can do myself

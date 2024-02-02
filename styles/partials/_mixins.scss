@@ -55,17 +55,18 @@
     line-height: 20px;
 }
 
-// @mixin footer-sections {
-//     @include footer-copy-mobile(font-size, line-height);
-//     margin-top: 5px;
-//     margin-bottom: 0px;
-// }
-
 @mixin tablet {
     @media (min-width: 768px) {
         @content
     }   
 }
+
+@mixin desktop {
+    @media (min-width: 1200px) {
+        @content
+    }
+}
+
 
 
 

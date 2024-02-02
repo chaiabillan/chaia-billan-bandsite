@@ -58,6 +58,15 @@ body {
   font-size: 14px;
   line-height: 22px;
 }
+.nav-bar__subheading--biography {
+  border-bottom: white 3px solid;
+  padding-bottom: 21px;
+  width: 67px;
+}
+.nav-bar__subheading--shows {
+  position: relative;
+  right: 15px;
+}
 @media (min-width: 768px) {
   .nav-bar {
     flex-direction: row;
@@ -79,11 +88,35 @@ body {
   }
   .nav-bar__subheading--biography {
     font-family: "Avenir Next Demi";
-    border-bottom: white 6px solid;
   }
   .nav-bar__subheading--shows {
     position: relative;
     left: 122px;
+  }
+}
+@media (min-width: 1200px) {
+  .nav-bar {
+    height: 80px;
+  }
+  .nav-bar__heading {
+    padding-top: 31px;
+    padding-left: 116px;
+  }
+  .nav-bar__subheading {
+    padding-top: 4px;
+    display: flex;
+    width: 114px;
+  }
+  .nav-bar__subheading--biography, .nav-bar__subheading--shows {
+    top: 25px;
+    left: 54px;
+  }
+  .nav-bar__subheading--biography {
+    font-family: "Avenir Next Demi";
+    border-bottom: white 6px solid;
+  }
+  .nav-bar__subheading--shows {
+    left: 83px;
   }
 }
 
@@ -125,6 +158,19 @@ body {
     line-height: 68px;
     top: 157px;
     left: 40px;
+  }
+}
+@media (min-width: 1200px) {
+  .hero__image {
+    height: 592px;
+  }
+  .hero__image--overlay {
+    top: 79px;
+    height: 592px;
+  }
+  .hero__title {
+    top: 230px;
+    left: 103px;
   }
 }
 
@@ -215,6 +261,7 @@ body {
   }
   .biography__content {
     display: flex;
+    padding-bottom: 16px;
   }
   .biography__content--left {
     font-size: 14px;
@@ -227,6 +274,71 @@ body {
     line-height: 22px;
     padding-left: 28px;
     line-height: 23.2px;
+  }
+}
+@media (min-width: 1200px) {
+  .biography {
+    padding-left: 87px;
+    padding-right: 87px;
+  }
+  .biography__title {
+    font-size: 36px;
+    line-height: 44px;
+    padding-top: 48px;
+    padding-bottom: 27px;
+    position: relative;
+    left: 32px;
+    font-size: 34px;
+  }
+  .biography__image {
+    height: 423px;
+    padding-left: 117px;
+    padding-right: 117px;
+    width: 77%;
+  }
+  .biography__image--description {
+    padding-top: 7px;
+    padding-left: 117px;
+    padding-right: 117px;
+    width: 61%;
+  }
+  .biography__image--description--text {
+    font-size: 21px;
+    line-height: 31px;
+    font-family: "Avenir Next Demi";
+  }
+  .biography__image--description--signature {
+    font-size: 14px;
+    line-height: 22px;
+    padding-top: 12px;
+  }
+  .biography__subtitle {
+    font-size: 24px;
+    line-height: 32px;
+    padding-top: 32px;
+    padding-bottom: 0px;
+    position: relative;
+    left: 116px;
+    font-family: "Avenir Next Demi";
+  }
+  .biography__content {
+    display: flex;
+    padding-bottom: 16px;
+    padding-left: 59px;
+    padding-right: 0px;
+    width: 83%;
+  }
+  .biography__content--left {
+    font-size: 14px;
+    line-height: 22px;
+    padding-right: 2px;
+    line-height: 19.2px;
+  }
+  .biography__content--right {
+    font-size: 14px;
+    line-height: 22px;
+    padding-left: 24.5px;
+    line-height: 19.2px;
   }
 }
 
@@ -248,11 +360,14 @@ body {
   padding-bottom: 6.5px;
 }
 @media (min-width: 768px) {
+  .gallery {
+    padding: 25px;
+  }
   .gallery__title {
     font-size: 36px;
     line-height: 44px;
-    padding-top: 46px;
-    padding-bottom: 7px;
+    padding-bottom: 12px;
+    margin-top: 0px;
   }
   .gallery__images {
     display: flex;
@@ -261,7 +376,30 @@ body {
     justify-content: space-between;
   }
   .gallery__images--individual {
-    width: 28%;
+    width: 30%;
+    padding: 11px;
+  }
+}
+@media (min-width: 1200px) {
+  .gallery {
+    padding: 26px 112px 16px 112px;
+  }
+  .gallery__title {
+    font-size: 36px;
+    line-height: 44px;
+    padding-bottom: 12px;
+    margin-top: 0px;
+    position: relative;
+    left: 9px;
+  }
+  .gallery__images {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .gallery__images--individual {
+    width: 31%;
     padding: 11px;
   }
 }
@@ -332,7 +470,7 @@ body {
   }
   .footer__title__socials {
     display: flex;
-    padding-top: 10px;
+    padding-top: 8px;
     align-items: center;
   }
   .footer__title {
@@ -350,6 +488,76 @@ body {
     align-items: center;
     font-size: 14px;
     line-height: 20px;
+  }
+  .footer__bees-knees--location {
+    padding-top: 17px;
+    padding-bottom: 16px;
+  }
+  .footer__limitless {
+    position: relative;
+    bottom: 5px;
+  }
+  .footer__limitless--location {
+    padding-top: 17px;
+    padding-bottom: 16px;
+  }
+  .footer__arch--location {
+    padding-top: 17px;
+    padding-bottom: 16px;
+  }
+  .footer__logo {
+    position: absolute;
+    left: 617px;
+    bottom: -1304px;
+  }
+  .footer__copyright {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  .footer {
+    padding: 19px;
+    height: 311px;
+    padding-left: 128px;
+  }
+  .footer__title__socials {
+    display: flex;
+    padding-top: 9px;
+    align-items: center;
+  }
+  .footer__title {
+    font-size: 36px;
+    line-height: 44px;
+  }
+  .footer__socials {
+    position: relative;
+    top: 7px;
+    left: 40px;
+  }
+  .footer__contacts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 718px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .footer__bees-knees--location {
+    padding-top: 17px;
+    padding-bottom: 16px;
+  }
+  .footer__limitless {
+    position: relative;
+    bottom: 1px;
+  }
+  .footer__limitless--location {
+    padding-top: 17px;
+    padding-bottom: 16px;
+  }
+  .footer__arch--location {
+    padding-top: 17px;
+    padding-bottom: 16px;
   }
   .footer__logo {
     position: absolute;

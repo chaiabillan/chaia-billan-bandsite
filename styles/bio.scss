@@ -7,12 +7,11 @@
 // }
 
 body {
-    margin: 0px;
+    margin: 0rem;
 }
 
 .nav-bar {
     background-color: $primary-black;
-    margin: 0px;
     display: flex;
     flex-direction: column;
 
@@ -26,23 +25,31 @@ body {
         display: flex;
         width: 100%;
 
+        &--hover {
+            transition: 0.5s;
+        }
+
+        &--hover:hover {
+            border-bottom: 4px white solid;
+            padding-bottom: 7px;
+        }
+
         &--biography {
             width: 50%;
-            font-size: 14px;
-            line-height: 22px;
+            font-size: 0.875rem;
+            line-height: 1.375rem;
             text-align: center;
             color: $primary-white;
             justify-content: center;
             @include subheader-mobile;
             border-bottom: 4px white solid;
             padding-bottom: 7px;
-
         }
 
         &--shows {
             width: 50%;
-            font-size: 14px;
-            line-height: 22px;
+            font-size: 0.875rem;
+            line-height: 1.375rem;
             text-align: center;
             color: $primary-white;
             justify-content: center;
@@ -56,7 +63,7 @@ body {
 
     @include tablet {
         flex-direction: row;
-        height: 72px;
+        height: 4.5rem;
 
         &__heading {
             padding-top: 27px;
@@ -65,7 +72,12 @@ body {
 
         &__subheading {
             padding-top: 1px;
-            width: 114px;
+            width: 7.125rem;
+
+            &--hover:hover {
+                border-bottom: 3px white solid;
+                padding-bottom: 3px;
+            }
 
             &--biography {
                 position: relative;
@@ -74,7 +86,7 @@ body {
                 left: 60px;
                 border-bottom: 3px white solid;
                 padding-bottom: 35px;
-                height: 10px;
+                height: 0.625rem;
             }
 
             &--shows {
@@ -86,7 +98,7 @@ body {
     }
 
     @include desktop {
-        height: 85px;
+        height: 5.3125rem;
 
         &__heading {
             padding-top: 31px;
@@ -96,7 +108,12 @@ body {
         &__subheading {
             padding-top: 1px;
             padding-bottom: 45px;
-            width: 114px;
+            width: 7.125rem;
+
+            &--hover:hover {
+                border-bottom: 3px white solid;
+                padding-bottom: 55px;
+            }
 
             &--biography {
                 font-family: 'Avenir Next Demi';
@@ -119,11 +136,12 @@ body {
     &__image {
         width: 100%;
         position: relative;
-        height: 187px;
+        height: 11.6875rem;
+        object-fit: cover;
 
         &--overlay {
             position: absolute;
-            height: 187px;
+            height: 11.6875rem;
             top: 79px;
             left: 0;
             right: 0;
@@ -147,11 +165,11 @@ body {
     @include tablet {
 
         &__image {
-            height: 449px;
+            height: 28.0625rem;
 
             &--overlay {
                 top: 72px;
-                height: 449px;
+                height: 28.0625rem;
             }
         }
 
@@ -165,11 +183,11 @@ body {
     @include desktop {
 
         &__image {
-            height: 628px;
+            height: 39.25rem;
 
             &--overlay {
                 top: 85px;
-                height: 628px;
+                height: 39.25rem;
             }
         }
 
@@ -194,16 +212,16 @@ body {
 
     &__image {
         width: 100%;
-        height: 157px;
+        height: 9.8125rem;
+        object-fit: cover;
         
         &--description {
             @include body-copy-mobile;
-            font-size: 13.5px;
-            line-height: 22px;
+            font-size: 0.8438rem;
+            line-height: 1.375rem;
             color: $primary-black;
 
             &--text {
-                margin-bottom: 5px;
                 padding-top: 16px;
                 margin: 0px;
                 color: $primary-black;
@@ -245,14 +263,14 @@ body {
         }
 
         &__image {
-            height: 307px;
+            height: 19.1875rem;
 
             &--description {
                 padding-top: 7px;
 
                 &--text {
-                    font-size: 23px;
-                    line-height: 32px;
+                    font-size: 1.4375rem;
+                    line-height: 2rem;
                     font-family: 'Avenir Next Demi';
                 }
 
@@ -277,13 +295,13 @@ body {
            &--left {
             @include body-copy-desktop;
             padding-right: 19px;
-            line-height: 23.2px;
+            line-height: 1.45rem;
            }
 
            &--right {
             @include body-copy-desktop;
             padding-left: 28px;
-            line-height: 23.2px;
+            line-height: 1.45rem;
            }
         }
     }
@@ -292,11 +310,11 @@ body {
 
         &__title {
             left: 32px;
-            font-size: 34px;
+            font-size: 2.125rem;
         }
 
         &__image {
-            height: 454px;
+            height: 28.375rem;
             padding: 0px 117px 10px 117px;
             width: 77%;
 
@@ -305,10 +323,9 @@ body {
                 padding-right: 117px;
                 width: 61%;
 
-
                 &--text {
-                    font-size: 21px;
-                    line-height: 31px;
+                    font-size: 1.3125rem;
+                    line-height: 1.9375rem;
                 }
             }
         }
@@ -332,7 +349,7 @@ body {
            }
 
            &--right {
-            padding-left: 24.5px;
+            padding-left: 24.5008px;
            }
         }
     }
@@ -394,7 +411,7 @@ body {
 
 
 .footer {
-    color: white;
+    color: $primary-white;
     background-color: $primary-black;
     padding: 16px;
     display: flex;
@@ -416,20 +433,20 @@ body {
         margin-bottom: -2px;
 
         &--instagram {
-            width: 22px;
-            height: 26px;
+            width: 1.375rem;
+            height: 1.625rem;
         }
 
         &--facebook {
             padding-left: 30px;
             padding-right: 30px;
-            width: 12px;
-            height: 24px;
+            width: 0.75rem;
+            height: 1.5rem;
         }
 
         &--twitter {
-            width: 27px;
-            height: 26px;
+            width: 1.6875rem;
+            height: 1.625rem;
         }
     }
 
@@ -437,7 +454,6 @@ body {
         margin-top: 8px;
         margin-bottom: 15px;
         @include footer-copy-mobile;
-
     }
 
     &__limitless {
@@ -454,10 +470,8 @@ body {
 
     &__link {
         text-decoration: none;
-        color: white;
+        color: $primary-white;
     }
-
-    &
 
     &__logo {
 
@@ -479,7 +493,7 @@ body {
 
     @include tablet {
         padding: 30px;
-        height: 311px;
+        height: 19.4375rem;
 
         &__title__socials {
             display: flex;
@@ -555,7 +569,7 @@ body {
 
     @include desktop {
         padding: 19px;
-        height: 339px;
+        height: 21.1875rem;
         padding-left: 128px;
 
         &__content {
@@ -572,7 +586,7 @@ body {
         }
 
         &__contacts {
-            width: 718px;
+            width: 44.875rem;
 
             &--padding {
                 padding-top: 13px;
@@ -590,11 +604,10 @@ body {
 
 // questions for openstudio
 
-// are the images supposed to stretch when i increase screen width?
-
 // can do myself
-// change everything to rem?
-// change all the padding and margins to concise format
+//hover isnt working for tablet
+//put everything else into rem i did half but now im confused
+//gitignore
 
 // maybe
 // change bio to article tag

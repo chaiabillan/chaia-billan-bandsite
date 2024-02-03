@@ -32,12 +32,11 @@
 }
 
 body {
-  margin: 0px;
+  margin: 0rem;
 }
 
 .nav-bar {
   background-color: #323232;
-  margin: 0px;
   display: flex;
   flex-direction: column;
 }
@@ -50,27 +49,34 @@ body {
   display: flex;
   width: 100%;
 }
+.nav-bar__subheading--hover {
+  transition: 0.5s;
+}
+.nav-bar__subheading--hover:hover {
+  border-bottom: 4px white solid;
+  padding-bottom: 7px;
+}
 .nav-bar__subheading--biography {
   width: 50%;
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   text-align: center;
   color: #FFFFFF;
   justify-content: center;
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   border-bottom: 4px white solid;
   padding-bottom: 7px;
 }
 .nav-bar__subheading--shows {
   width: 50%;
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   text-align: center;
   color: #FFFFFF;
   justify-content: center;
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
 }
 .nav-bar__subheading--linkstyle {
   text-decoration: none;
@@ -78,7 +84,7 @@ body {
 @media (min-width: 768px) {
   .nav-bar {
     flex-direction: row;
-    height: 72px;
+    height: 4.5rem;
   }
   .nav-bar__heading {
     padding-top: 27px;
@@ -86,7 +92,11 @@ body {
   }
   .nav-bar__subheading {
     padding-top: 1px;
-    width: 114px;
+    width: 7.125rem;
+  }
+  .nav-bar__subheading--hover:hover {
+    border-bottom: 3px white solid;
+    padding-bottom: 3px;
   }
   .nav-bar__subheading--biography {
     position: relative;
@@ -95,7 +105,7 @@ body {
     left: 60px;
     border-bottom: 3px white solid;
     padding-bottom: 35px;
-    height: 10px;
+    height: 0.625rem;
   }
   .nav-bar__subheading--shows {
     position: relative;
@@ -105,7 +115,7 @@ body {
 }
 @media (min-width: 1280px) {
   .nav-bar {
-    height: 85px;
+    height: 5.3125rem;
   }
   .nav-bar__heading {
     padding-top: 31px;
@@ -114,7 +124,11 @@ body {
   .nav-bar__subheading {
     padding-top: 1px;
     padding-bottom: 45px;
-    width: 114px;
+    width: 7.125rem;
+  }
+  .nav-bar__subheading--hover:hover {
+    border-bottom: 3px white solid;
+    padding-bottom: 55px;
   }
   .nav-bar__subheading--biography {
     font-family: "Avenir Next Demi";
@@ -131,11 +145,13 @@ body {
 .hero__image {
   width: 100%;
   position: relative;
-  height: 187px;
+  height: 11.6875rem;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .hero__image--overlay {
   position: absolute;
-  height: 187px;
+  height: 11.6875rem;
   top: 79px;
   left: 0;
   right: 0;
@@ -149,32 +165,32 @@ body {
   left: 10px;
   position: absolute;
   transform: translateY(-50%);
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   z-index: 2;
 }
 @media (min-width: 768px) {
   .hero__image {
-    height: 449px;
+    height: 28.0625rem;
   }
   .hero__image--overlay {
     top: 72px;
-    height: 449px;
+    height: 28.0625rem;
   }
   .hero__title {
-    font-size: 60px;
-    line-height: 68px;
+    font-size: 3.75rem;
+    line-height: 4.25rem;
     top: 157px;
     left: 40px;
   }
 }
 @media (min-width: 1280px) {
   .hero__image {
-    height: 628px;
+    height: 39.25rem;
   }
   .hero__image--overlay {
     top: 85px;
-    height: 628px;
+    height: 39.25rem;
   }
   .hero__title {
     top: 238px;
@@ -191,22 +207,23 @@ body {
   padding-top: 13px;
   padding-bottom: 12px;
   color: #323232;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 .biography__image {
   width: 100%;
-  height: 157px;
+  height: 9.8125rem;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .biography__image--description {
-  font-size: 13px;
-  line-height: 18px;
-  font-size: 13.5px;
-  line-height: 22px;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-size: 0.8438rem;
+  line-height: 1.375rem;
   color: #323232;
 }
 .biography__image--description--text {
-  margin-bottom: 5px;
   padding-top: 16px;
   margin: 0px;
   color: #323232;
@@ -218,14 +235,14 @@ body {
   color: #323232;
 }
 .biography__subtitle {
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   margin: 0px;
   color: #000000;
 }
 .biography__content {
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
   margin: 0px;
   color: #323232;
   padding-top: 7px;
@@ -236,32 +253,32 @@ body {
     padding-right: 87px;
   }
   .biography__title {
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
     padding-top: 48px;
     padding-bottom: 27px;
     position: relative;
     right: 58px;
   }
   .biography__image {
-    height: 307px;
+    height: 19.1875rem;
   }
   .biography__image--description {
     padding-top: 7px;
   }
   .biography__image--description--text {
-    font-size: 23px;
-    line-height: 32px;
+    font-size: 1.4375rem;
+    line-height: 2rem;
     font-family: "Avenir Next Demi";
   }
   .biography__image--description--signature {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
     padding-top: 12px;
   }
   .biography__subtitle {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.5rem;
+    line-height: 2rem;
     padding-top: 36px;
     padding-bottom: 4px;
     font-family: "Avenir Next Demi";
@@ -271,25 +288,25 @@ body {
     padding-bottom: 16px;
   }
   .biography__content--left {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
     padding-right: 19px;
-    line-height: 23.2px;
+    line-height: 1.45rem;
   }
   .biography__content--right {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
     padding-left: 28px;
-    line-height: 23.2px;
+    line-height: 1.45rem;
   }
 }
 @media (min-width: 1280px) {
   .biography__title {
     left: 32px;
-    font-size: 34px;
+    font-size: 2.125rem;
   }
   .biography__image {
-    height: 454px;
+    height: 28.375rem;
     padding: 0px 117px 10px 117px;
     width: 77%;
   }
@@ -299,8 +316,8 @@ body {
     width: 61%;
   }
   .biography__image--description--text {
-    font-size: 21px;
-    line-height: 31px;
+    font-size: 1.3125rem;
+    line-height: 1.9375rem;
   }
   .biography__subtitle {
     padding-top: 32px;
@@ -319,7 +336,7 @@ body {
     padding-right: 2px;
   }
   .biography__content--right {
-    padding-left: 24.5px;
+    padding-left: 24.5008px;
   }
 }
 
@@ -329,8 +346,8 @@ body {
   background-color: #FAFAFA;
 }
 .gallery__title {
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   margin-bottom: 0px;
   padding-top: 20px;
   color: #323232;
@@ -345,8 +362,8 @@ body {
     padding: 25px;
   }
   .gallery__title {
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
     padding-bottom: 12px;
     margin-top: 0px;
   }
@@ -375,7 +392,7 @@ body {
 }
 
 .footer {
-  color: white;
+  color: #FFFFFF;
   background-color: #323232;
   padding: 16px;
   display: flex;
@@ -385,8 +402,8 @@ body {
   padding-top: 1px;
 }
 .footer__title {
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   margin-bottom: 11px;
   margin-top: 8px;
 }
@@ -396,58 +413,58 @@ body {
   margin-bottom: -2px;
 }
 .footer__socials--instagram {
-  width: 22px;
-  height: 26px;
+  width: 1.375rem;
+  height: 1.625rem;
 }
 .footer__socials--facebook {
   padding-left: 30px;
   padding-right: 30px;
-  width: 12px;
-  height: 24px;
+  width: 0.75rem;
+  height: 1.5rem;
 }
 .footer__socials--twitter {
-  width: 27px;
-  height: 26px;
+  width: 1.6875rem;
+  height: 1.625rem;
 }
 .footer__bees-knees {
   margin-top: 8px;
   margin-bottom: 15px;
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
 }
 .footer__limitless {
   margin-top: 14px;
   margin-bottom: 15px;
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
 }
 .footer__arch {
   margin-top: 12px;
   margin-bottom: 15px;
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
 }
 .footer__link {
   text-decoration: none;
-  color: white;
+  color: #FFFFFF;
 }
-.footer .footer__logo--top {
+.footer__logo--top {
   display: none;
 }
-.footer .footer__logo--bottom {
+.footer__logo--bottom {
   padding-top: 35px;
   padding-bottom: 5px;
 }
 .footer__copyright {
-  font-size: 10px;
-  line-height: 20px;
+  font-size: 0.625rem;
+  line-height: 1.25rem;
   margin-top: 8px;
   margin-bottom: 6px;
 }
 @media (min-width: 768px) {
   .footer {
     padding: 30px;
-    height: 311px;
+    height: 19.4375rem;
   }
   .footer__title__socials {
     display: flex;
@@ -456,8 +473,8 @@ body {
     justify-content: space-between;
   }
   .footer__title {
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
   }
   .footer__socials {
     position: relative;
@@ -467,8 +484,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
   .footer__bees-knees--location {
     padding-top: 17px;
@@ -499,14 +516,14 @@ body {
     display: none;
   }
   .footer__copyright {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 }
 @media (min-width: 1280px) {
   .footer {
     padding: 19px;
-    height: 339px;
+    height: 21.1875rem;
     padding-left: 128px;
   }
   .footer__content {
@@ -520,7 +537,7 @@ body {
     left: 57px;
   }
   .footer__contacts {
-    width: 718px;
+    width: 44.875rem;
   }
   .footer__contacts--padding {
     padding-top: 13px;

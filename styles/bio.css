@@ -95,8 +95,8 @@ body {
     width: 7.125rem;
   }
   .nav-bar__subheading--hover:hover {
-    border-bottom: 3px white solid;
-    padding-bottom: 3px;
+    border-bottom: 10px white solid;
+    padding-bottom: 40px;
   }
   .nav-bar__subheading--biography {
     position: relative;
@@ -215,6 +215,7 @@ body {
   height: 9.8125rem;
   -o-object-fit: cover;
      object-fit: cover;
+  max-width: 276px;
 }
 .biography__image--description {
   font-size: 0.8125rem;
@@ -262,6 +263,7 @@ body {
   }
   .biography__image {
     height: 19.1875rem;
+    max-width: 560px;
   }
   .biography__image--description {
     padding-top: 7px;
@@ -309,6 +311,7 @@ body {
     height: 28.375rem;
     padding: 0px 117px 10px 117px;
     width: 77%;
+    max-width: 852px;
   }
   .biography__image--description {
     padding-left: 117px;
@@ -371,7 +374,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
   }
   .gallery__images--individual {
     width: 30%;
@@ -385,9 +388,6 @@ body {
   .gallery__title {
     position: relative;
     left: 9px;
-  }
-  .gallery--individual {
-    width: 31%;
   }
 }
 

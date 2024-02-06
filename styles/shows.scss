@@ -6,6 +6,13 @@ body {
     margin: 0rem;
     overflow-x: hidden;
 }
+main {
+    overflow-x: hidden;
+}
+
+* {
+    border: red 1px dotted;
+}
 
 .nav-bar {
     background-color: $primary-black;
@@ -132,76 +139,221 @@ body {
 }
 
 .hero {
+    height: 268px;
+    width: 100%;
+    background: rgba(50, 50, 50);
+    overflow: hidden;
 
     &__image {
-        width: 100%;
-        position: relative;
-        height: 16.6875rem;
         object-fit: cover;
-
-        &--overlay {
-            position: absolute;
-            height: 16.6875rem;
-            // object-fit: cover;
-            top: 79px;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(50, 50, 50, 0.5);
-            z-index: 1;
-        }
-    }
-    
-    &__title {
-        color: $primary-white;
-        top: 72px;
-        left: 10px;
+        height: 268px;
+        width: 100%;
+        opacity: 0.5;
         position: absolute;
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-        @include page-header-section-header-mobile;
-        z-index: 2;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        padding: 14px;
+
+        &__title {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            color: white;
+    
+            &--album {
+                @include subheader-mobile;
+                position: relative;
+                top: 1px;
+                // left: 14px;
+            }
+    
+            &--song {
+                @include page-header-section-header-mobile;
+                position: relative;
+                bottom: 24px;
+                // height: 50px;
+                // left: 14px;
+            }
+        }
+    
+        &__soundcloud {
+            display: flex;
+            height: 95px;
+            background-color: white;
+            position: relative;
+            top: 128px;
+            width: 100%;
+            border-radius: 7px;
+        }
     }
 
     @include tablet {
+        height: 485px;
 
         &__image {
-            height: 28.0625rem;
+            height: 485px;
 
-            &--overlay {
-                top: 72px;
-                height: 28.0625rem;
-            }
         }
 
+        &__content {
+            padding: 34px;
+
+            &__title--album {
+                font-size: 24px;
+            }
+
+            &__title--song {
+                font-size: 60px;
+                line-height: 70px;
+                bottom: 76px;
+            }
+
+            &__soundcloud {
+                top: 250px;
+                height: 136px;
+                width: 416px;
+            }
+        }
+    }
+
+}
+
+//     &__image {
+//         width: 100%;
+//         position: absolute;
+//         height: 16.6875rem;
+//         object-fit: cover;
+
+//         &--overlay {
+//             position: absolute;
+//             height: 16.6875rem;
+//             // object-fit: cover;
+//             top: 79px;
+//             left: 0;
+//             right: 0;
+//             bottom: 0;
+//             background-color: rgba(50, 50, 50, 0.5);
+//             z-index: 1;
+//         }
+//     }
+    
+
+//     &__title {
+//         display: flex;
+//         flex-direction: column;
+
+//         &--album {
+//             position: relative;
+//             left: 12px;
+//             top: 12px;
+//             color: $primary-white;
+//             @include subheader-mobile;
+//         }
+
+//         &--song {
+//             color: $primary-white;
+//             // top: 72px;
+//             // left: 10px;
+//             // position: absolute;
+//             -ms-transform: translateY(-50%);
+//             transform: translateY(-50%);
+//             @include page-header-section-header-mobile;
+//             z-index: 2;
+//         }
+//     }
+    
+//     // &--song {
+//     //     color: $primary-white;
+//     //     top: 72px;
+//     //     left: 10px;
+//     //     position: absolute;
+//     //     -ms-transform: translateY(-50%);
+//     //     transform: translateY(-50%);
+//     //     @include page-header-section-header-mobile;
+//     //     z-index: 2;
+//     // }
+
+//     @include tablet {
+//         // display: flex;
+//         // flex-direction: column;
+//         &__image {
+//             height: 28.0625rem;
+
+//             &--overlay {
+//                 top: 72px;
+//                 height: 28.0625rem;
+//             }
+//         }
+
+//         &--overlay {
+//             display: flex;
+//             flex-direction: column;
+
+//             &__title {
+//                 &--song {
+//                     // top: 157px;
+//                     // left: 40px;
+//                     // @include page-header-desktop;
+//                     font-size: 50px;
+//                     line-height: 30px;
+//                 }
+//                 &--song2 {
+//                     // top: 50px;
+//                 }
+//             }
+//         }
+        
+        
+        
+//     }
+
+//     @include desktop {
+
+//         &__image {
+//             height: 39.25rem;
+
+//             &--overlay {
+//                 top: 85px;
+//                 height: 39.25rem;
+//             }
+//         }
+
+//         &__title {
+//             top: 238px;
+//             left: 103px;
+//         }
+//     }
+// }
+
+.shows {
+    height: 400px;
+
+    &__title {
+        @include page-header-section-header-mobile;
+        position: relative;
+        top: 4px;
+        left: 16px;
+    }
+
+    @include tablet {
         &__title {
-            @include page-header-desktop;
-            top: 157px;
-            left: 40px;
+            @include section-header-desktop;
+            top: 4px;
+            left: 35px;
         }
     }
 
     @include desktop {
-
-        &__image {
-            height: 39.25rem;
-
-            &--overlay {
-                top: 85px;
-                height: 39.25rem;
-            }
-        }
-
         &__title {
-            top: 238px;
-            left: 103px;
+            left: 133px;
         }
     }
 }
 
-section {
-    height: 400px;
-}
+
 
 
 

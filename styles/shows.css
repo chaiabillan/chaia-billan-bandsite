@@ -40,10 +40,6 @@ main {
   overflow-x: hidden;
 }
 
-* {
-  border: red 1px dotted;
-}
-
 .nav-bar {
   background-color: #323232;
   display: flex;
@@ -184,6 +180,7 @@ main {
   line-height: 2rem;
   position: relative;
   bottom: 24px;
+  width: 205px;
 }
 .hero__content__soundcloud {
   display: flex;
@@ -211,11 +208,43 @@ main {
     font-size: 60px;
     line-height: 70px;
     bottom: 76px;
+    width: 600px;
   }
   .hero__content__soundcloud {
     top: 250px;
     height: 136px;
     width: 416px;
+  }
+}
+@media (min-width: 1280px) {
+  .hero {
+    height: 622px;
+    display: flex;
+  }
+  .hero__image {
+    height: 622px;
+  }
+  .hero__content {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  .hero__content__title {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 259px;
+  }
+  .hero__content__title--song {
+    width: 504px;
+  }
+  .hero__content__soundcloud {
+    display: flex;
+    flex-direction: row;
+    top: 0px;
   }
 }
 

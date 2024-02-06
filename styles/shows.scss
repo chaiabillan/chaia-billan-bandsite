@@ -10,9 +10,9 @@ main {
     overflow-x: hidden;
 }
 
-* {
-    border: red 1px dotted;
-}
+// * {
+//     border: red 1px dotted;
+// }
 
 .nav-bar {
     background-color: $primary-black;
@@ -176,6 +176,7 @@ main {
                 bottom: 24px;
                 // height: 50px;
                 // left: 14px;
+                width: 205px;
             }
         }
     
@@ -209,12 +210,48 @@ main {
                 font-size: 60px;
                 line-height: 70px;
                 bottom: 76px;
+                width: 600px;
             }
 
             &__soundcloud {
                 top: 250px;
                 height: 136px;
                 width: 416px;
+            }
+        }
+    }
+
+    @include desktop {
+        height: 622px;
+        display: flex;
+
+        &__image {
+            height: 622px;
+        }
+
+        &__content {
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 100%;
+
+            &__title {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                height: 259px;
+
+                &--song {
+                    width: 504px;
+                }
+            }
+
+            &__soundcloud {
+                display: flex;
+                flex-direction: row;
+                top: 0px;
             }
         }
     }

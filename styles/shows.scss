@@ -258,112 +258,6 @@ main {
 
 }
 
-//     &__image {
-//         width: 100%;
-//         position: absolute;
-//         height: 16.6875rem;
-//         object-fit: cover;
-
-//         &--overlay {
-//             position: absolute;
-//             height: 16.6875rem;
-//             // object-fit: cover;
-//             top: 79px;
-//             left: 0;
-//             right: 0;
-//             bottom: 0;
-//             background-color: rgba(50, 50, 50, 0.5);
-//             z-index: 1;
-//         }
-//     }
-    
-
-//     &__title {
-//         display: flex;
-//         flex-direction: column;
-
-//         &--album {
-//             position: relative;
-//             left: 12px;
-//             top: 12px;
-//             color: $primary-white;
-//             @include subheader-mobile;
-//         }
-
-//         &--song {
-//             color: $primary-white;
-//             // top: 72px;
-//             // left: 10px;
-//             // position: absolute;
-//             -ms-transform: translateY(-50%);
-//             transform: translateY(-50%);
-//             @include page-header-section-header-mobile;
-//             z-index: 2;
-//         }
-//     }
-    
-//     // &--song {
-//     //     color: $primary-white;
-//     //     top: 72px;
-//     //     left: 10px;
-//     //     position: absolute;
-//     //     -ms-transform: translateY(-50%);
-//     //     transform: translateY(-50%);
-//     //     @include page-header-section-header-mobile;
-//     //     z-index: 2;
-//     // }
-
-//     @include tablet {
-//         // display: flex;
-//         // flex-direction: column;
-//         &__image {
-//             height: 28.0625rem;
-
-//             &--overlay {
-//                 top: 72px;
-//                 height: 28.0625rem;
-//             }
-//         }
-
-//         &--overlay {
-//             display: flex;
-//             flex-direction: column;
-
-//             &__title {
-//                 &--song {
-//                     // top: 157px;
-//                     // left: 40px;
-//                     // @include page-header-desktop;
-//                     font-size: 50px;
-//                     line-height: 30px;
-//                 }
-//                 &--song2 {
-//                     // top: 50px;
-//                 }
-//             }
-//         }
-        
-        
-        
-//     }
-
-//     @include desktop {
-
-//         &__image {
-//             height: 39.25rem;
-
-//             &--overlay {
-//                 top: 85px;
-//                 height: 39.25rem;
-//             }
-//         }
-
-//         &__title {
-//             top: 238px;
-//             left: 103px;
-//         }
-//     }
-// }
 
 .shows {
     height: 400px;
@@ -389,10 +283,6 @@ main {
         }
     }
 }
-
-
-
-
 
 
 

@@ -6,6 +6,13 @@ body {
     margin: 0rem;
     overflow-x: hidden;
 }
+// * {
+//     // margin: 0rem;
+//     overflow-x: hidden;
+// }
+* {
+    border: red 1px dotted;
+}
 
 .nav-bar {
     background-color: $primary-black;
@@ -129,70 +136,124 @@ body {
 
 
 .hero {
+    height: 11.6875rem;
+    width: 100%;
+    background: rgba(50, 50, 50);
+    overflow: hidden;
+    display: flex;
 
     &__image {
-        width: 100%;
-        position: relative;
-        height: 11.6875rem;
         object-fit: cover;
-
-        &--overlay {
-            position: absolute;
-            height: 11.6875rem;
-            top: 79px;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(50, 50, 50, 0.5);
-            z-index: 1;
-        }
-    }
-    
-    &__title {
-        color: $primary-white;
-        top: 72px;
-        left: 10px;
+        height: 11.6875rem;
+        width: 100%;
+        opacity: 0.5;
         position: absolute;
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-        @include page-header-section-header-mobile;
-        z-index: 2;
+    }
+
+    &__content {
+        padding-left: 15px;
+        display: flex;
+        align-items: center;
+
+        &--title {
+            color: $primary-white;
+            position: absolute;
+            @include page-header-section-header-mobile;
+            
+            
+        }
     }
 
     @include tablet {
+        height: 28.0625rem;
 
         &__image {
             height: 28.0625rem;
-
-            &--overlay {
-                top: 72px;
-                height: 28.0625rem;
-            }
         }
 
-        &__title {
-            @include page-header-desktop;
-            top: 157px;
-            left: 40px;
+        &__content {
+            padding-left: 43px;
+
+            &--title {
+                @include page-header-desktop;
+            }
         }
     }
 
     @include desktop {
+        height: 39.25rem;
 
         &__image {
             height: 39.25rem;
-
-            &--overlay {
-                top: 85px;
-                height: 39.25rem;
-            }
         }
-
-        &__title {
-            top: 238px;
-            left: 103px;
+        &__content {
+            padding-left: 134px;
         }
     }
+
+    // &__image {
+    //     width: 100%;
+    //     position: relative;
+    //     height: 11.6875rem;
+    //     object-fit: cover;
+
+    //     &--overlay {
+    //         position: absolute;
+    //         height: 11.6875rem;
+    //         top: 79px;
+    //         left: 0;
+    //         right: 0;
+    //         bottom: 0;
+    //         background-color: rgba(50, 50, 50, 0.5);
+    //         z-index: 1;
+    //     }
+    // }
+    
+    // &__title {
+    //     color: $primary-white;
+    //     top: 72px;
+    //     left: 10px;
+    //     position: absolute;
+    //     -ms-transform: translateY(-50%);
+    //     transform: translateY(-50%);
+    //     @include page-header-section-header-mobile;
+    //     z-index: 2;
+    // }
+
+    // @include tablet {
+
+    //     &__image {
+    //         height: 28.0625rem;
+
+    //         &--overlay {
+    //             top: 72px;
+    //             height: 28.0625rem;
+    //         }
+    //     }
+
+    //     &__title {
+    //         @include page-header-desktop;
+    //         top: 157px;
+    //         left: 40px;
+    //     }
+    // }
+
+    // @include desktop {
+
+    //     &__image {
+    //         height: 39.25rem;
+
+    //         &--overlay {
+    //             top: 85px;
+    //             height: 39.25rem;
+    //         }
+    //     }
+
+    //     &__title {
+    //         top: 238px;
+    //         left: 103px;
+    //     }
+    // }
 }
 
 .biography {
@@ -237,6 +298,7 @@ body {
         @include subheader-mobile;
         margin: 0px;
         color: $secondary-dark-black;
+        width: 200px
     }
 
     &__content {
@@ -401,6 +463,9 @@ body {
     }
 }
 
+.comment {
+    height: 762px; //could be max content eventually but lets just do this for now
+}
 
 .footer {
     color: $primary-white;

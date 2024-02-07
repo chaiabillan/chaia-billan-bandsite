@@ -10,9 +10,9 @@ body {
 //     // margin: 0rem;
 //     overflow-x: hidden;
 // }
-* {
-    border: red 1px dotted;
-}
+// * {
+//     border: red 1px dotted;
+// }
 
 .nav-bar {
     background-color: $primary-black;
@@ -463,8 +463,124 @@ body {
     }
 }
 
+.join-convo {
+    height:fit-content; //do we even need this
+    padding: 16px;
+
+    &__title { //prob needs to be moved down
+        @include page-header-section-header-mobile;
+        margin: 0px;
+        padding-bottom: 10px;
+    }
+
+    @include tablet {
+        padding: 32px;
+
+        &__title {
+            @include section-header-desktop;
+        }
+    }
+    
+}
 .comment {
-    height: 762px; //could be max content eventually but lets just do this for now
+    display: flex;
+    flex-direction: row;
+
+    &__picture {
+        padding-right: 16px;
+
+        &--icon {
+            display: block;
+            height: 36px;
+            width: 36px;
+            background-color: $secondary-mercury;
+            border-radius: 50%;
+            position: relative;
+            top: 21px;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+
+        &--label {
+            @include labels-buttons-mobile;
+            color: $primary-silver;
+        }
+
+        &--field {
+            border: 1px solid $secondary-mercury;
+            color: $secondary-dark-black;
+            padding: 12px;
+            margin-bottom: 16px;
+            background-color: $secondary-alabaster;
+            border-radius: 4px;
+            @include body-copy-mobile;
+
+            &::placeholder {
+                color: $secondary-dark-black;
+                opacity: 1;
+            }
+
+            &--comment {
+                padding-bottom: 50px;
+            }
+        }
+
+        &--button {
+            // margin-top: 16px;
+            background-color: $primary-black;
+            color: $primary-white;
+            border-radius: 4px;
+            padding: 8px;
+            @include subheader-mobile;
+        }
+
+    }
+
+    @include tablet {
+        padding: 16px 64px 0px 64px;
+
+        &__picture {
+            &--icon {
+                height: 48px;
+                width: 48px;
+            }
+        }
+
+        &__form {
+
+            &--label {
+                @include labels-buttons-desktop;
+            }
+
+            &--field {
+                @include body-copy-desktop;
+
+                &--comment {
+                    padding-bottom: 39px;
+                }
+            }
+
+            &--button {
+                // display: flex;
+                width: 30%;
+                // justify-content: flex-end;
+            }
+        }
+
+
+
+
+
+
+        //icon size is 48px
+    }
+
+
 }
 
 .footer {

@@ -36,10 +36,6 @@ body {
   overflow-x: hidden;
 }
 
-* {
-  border: red 1px dotted;
-}
-
 .nav-bar {
   background-color: #323232;
   display: flex;
@@ -388,8 +384,105 @@ body {
   }
 }
 
+.join-convo {
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 16px;
+}
+.join-convo__title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin: 0px;
+  padding-bottom: 10px;
+}
+@media (min-width: 768px) {
+  .join-convo {
+    padding: 32px;
+  }
+  .join-convo__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+  }
+}
+
 .comment {
-  height: 762px;
+  display: flex;
+  flex-direction: row;
+}
+.comment__picture {
+  padding-right: 16px;
+}
+.comment__picture--icon {
+  display: block;
+  height: 36px;
+  width: 36px;
+  background-color: #E1E1E1;
+  border-radius: 50%;
+  position: relative;
+  top: 21px;
+}
+.comment__form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.comment__form--label {
+  font-size: 0.625rem;
+  line-height: 1.25rem;
+  color: #AFAFAF;
+}
+.comment__form--field {
+  border: 1px solid #E1E1E1;
+  color: #000000;
+  padding: 12px;
+  margin-bottom: 16px;
+  background-color: #FAFAFA;
+  border-radius: 4px;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+}
+.comment__form--field::-moz-placeholder {
+  color: #000000;
+  opacity: 1;
+}
+.comment__form--field::placeholder {
+  color: #000000;
+  opacity: 1;
+}
+.comment__form--field--comment {
+  padding-bottom: 50px;
+}
+.comment__form--button {
+  background-color: #323232;
+  color: #FFFFFF;
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
+@media (min-width: 768px) {
+  .comment {
+    padding: 16px 64px 0px 64px;
+  }
+  .comment__picture--icon {
+    height: 48px;
+    width: 48px;
+  }
+  .comment__form--label {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+  }
+  .comment__form--field {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+  .comment__form--field--comment {
+    padding-bottom: 39px;
+  }
+  .comment__form--button {
+    width: 30%;
+  }
 }
 
 .footer {

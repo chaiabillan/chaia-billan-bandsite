@@ -260,27 +260,25 @@ main {
 
 
 .shows-section {
-    // height: fit-content; this doesnt even do anything 
+    display: flex;
+    flex-direction: column;
 
     &__title {
         @include page-header-section-header-mobile;
-        position: relative;
-        top: 4px;
-        left: 16px;
+        padding-left: 16px;
     }
 
     @include tablet {
         &__title {
             @include section-header-desktop;
-            top: 4px;
-            left: 35px;
+            margin-left: 16px;
         }
     }
 
     @include desktop {
-        &__title {
-            left: 133px;
-        }
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-evenly;
     }
 }
 
@@ -294,9 +292,15 @@ main {
         @include labels-buttons-mobile;
         color: $primary-silver;
         margin: 0px;
-        // padding-top: 16px;
         &--top {
             padding-top: 16px;
+        }
+
+        &--bigscreen {
+            @include labels-buttons-mobile;
+            color: $primary-silver;
+            margin: 0px;
+            display: none;
         }
     }
 
@@ -305,9 +309,11 @@ main {
         color: $secondary-dark-black;
         margin: 0px;
         padding-bottom: 15px;
+        min-width: 11rem;
     }
 
     &__button {
+        height: 40px;
 
 
         &--interior { //consdier making a button mixin because this is the exact same as comment button on other page
@@ -324,12 +330,58 @@ main {
     @include tablet {
         flex-direction: row;
         justify-content: space-between;
+        padding: 14px;
+        margin-right: 16px;
+        margin-left: 16px;
+        align-items: baseline;
+        
 
         &__label {
             display: none;
+
+            &--bigscreen {
+                display: flex;
+                padding-right: 16px;
+                padding-left: 16px;
+                width: 100%;
+                margin-left: 16px;
+                margin-left: 16px;
+                @include labels-buttons-desktop;
+
+                &--each {
+                    width: 11.5rem;
+                }
+            }
+        }
+
+        &__info {
+            @include body-copy-desktop;
+        }
+
+        &__button {
+
+            &--interior {
+                width: 150px;
+            }
+        }
+    }
+
+    @include desktop {
+
+        &__label {
+            &--bigscreen {
+                &--each {
+                    min-width: 13.5rem;
+                }
+
+            }
+        }
+        &__info {
+            min-width: 13.5rem;
         }
     }
 }
+
 
 
 

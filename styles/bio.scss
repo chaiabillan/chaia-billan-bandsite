@@ -480,6 +480,10 @@ body {
             @include section-header-desktop;
         }
     }
+
+    @include desktop {
+        padding: 32px 130px 16px 130px;
+    }
     
 }
 .comment {
@@ -529,14 +533,19 @@ body {
                 padding-bottom: 50px;
             }
         }
-
+        
         &--button {
-            // margin-top: 16px;
-            background-color: $primary-black;
-            color: $primary-white;
-            border-radius: 4px;
-            padding: 8px;
-            @include subheader-mobile;
+
+            &--content {
+                // margin-top: 16px;
+                background-color: $primary-black;
+                color: $primary-white;
+                border-radius: 4px;
+                padding: 8px;
+                @include subheader-mobile;
+                width: 100%;
+            }
+            
         }
 
     }
@@ -566,22 +575,24 @@ body {
             }
 
             &--button {
-                // display: flex;
-                width: 30%;
-                // justify-content: flex-end;
+                display: flex;
+                justify-content: flex-end;
+                &--content {
+                    width: 30%;   
+                }
             }
         }
-
-
-
-
-
-
-        //icon size is 48px
     }
 
-
+    @include desktop {
+        padding: 16px 260px 0px 260px;
+    }
 }
+
+// #button {
+//     display: flex;
+//     justify-content: flex-end;
+// }
 
 .footer {
     color: $primary-white;

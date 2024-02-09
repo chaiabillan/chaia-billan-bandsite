@@ -17,7 +17,7 @@ const postsList = [
 ]
 
 
-const joinConvo = document.querySelector("join-convo");
+const joinConvo = document.querySelector(".join-convo");
 
 for (let i = 0; i < postsList.length; i++) {
     const postList = postsList[i];
@@ -30,7 +30,41 @@ function displayPostInfo(postList) {
     const comment = document.createElement("div");
     comment.classList.add("comment");
 
+    const commentPicture = document.createElement("div");
+    commentPicture.classList.add("comment__picture");
+
+    const commentPictureIcon = document.createElement("span");
+    commentPictureIcon.classList.add("comment__picture--icon");
+
+    const commentForm = document.createElement("div");
+    commentForm.classList.add("comment__form", "posts");
+
+    const postsInfo = document.createElement("div");
+    postsInfo.classList.add("posts__info");
+
+    const postInfoName = document.createElement("p");
+    postInfoName.classList.add("posts__info--name", "demi");
+    postInfoName.innerText = postList.name;
+
+    const postInfoDate = document.createElement("p");
+    postInfoDate.classList.add("posts__info--date", "normal");
+    postInfoDate.innerText = postList.date;
+
+    const postContent = document.createElement("div");
+    postContent.classList.add("posts__content");
+
+    const postContentInside = document.createElement("p");
+    postContentInside.classList.add("posts__content--inside", "normal");
+    postContentInside.innerText = postList.comment;
+
 
     joinConvo.appendChild(comment);
-
+    comment.appendChild(commentPicture);
+    commentPicture.appendChild(commentPictureIcon);
+    comment.appendChild(commentForm);
+    commentForm.appendChild(postsInfo);
+    postsInfo.appendChild(postInfoName);
+    postsInfo.appendChild(postInfoDate);
+    commentForm.appendChild(postContent);
+    postContent.appendChild(postContentInside);
 }

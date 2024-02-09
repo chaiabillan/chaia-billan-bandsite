@@ -32,6 +32,29 @@ const showsList = [
 ]
 
 
+const mainSection = document.querySelector("main");
+
+const showsSection = document.createElement("section");
+showsSection.classList.add("shows-section__contents");
+
+const showLabelBigscreen = document.createElement("div");
+showLabelBigscreen.classList.add("show__label--bigscreen", "normal")
+
+const showLabelBigscreenEach = document.createElement("p");
+showLabelBigscreenEach.classList.add("show__label--bigscreen--each");
+showLabelBigscreenEach.innerText = "DATE";
+const showLabelBigscreenEach2 = document.createElement("p");
+showLabelBigscreenEach2.classList.add("show__label--bigscreen--each");
+showLabelBigscreenEach2.innerText = "VENUE";
+const showLabelBigscreenEach3 = document.createElement("p");
+showLabelBigscreenEach3.classList.add("show__label--bigscreen--each");
+showLabelBigscreenEach3.innerText = "LOCATION";
+
+showsSection.appendChild(showLabelBigscreen);
+    showLabelBigscreen.appendChild(showLabelBigscreenEach);
+    showLabelBigscreen.appendChild(showLabelBigscreenEach2);
+    showLabelBigscreen.appendChild(showLabelBigscreenEach3);
+
 for (let i = 0; i < showsList.length; i++) {
     const showList = showsList[i];
     
@@ -39,28 +62,10 @@ for (let i = 0; i < showsList.length; i++) {
 }
 
 function displayShowInfo(showList) {
-
-    const mainSection = document.querySelector("main");
-
-    const showsSection = document.createElement("section");
-    showsSection.classList.add("shows-section__contents");
-    // showsSection.innerText = "hi";
-    
-    const showLabelBigscreen = document.createElement("div");
-    showLabelBigscreen.classList.add("show__label--bigscreen", "normal")
-    
-    const showLabelBigscreenEach = document.createElement("p");
-    showLabelBigscreenEach.classList.add("show__label--bigscreen--each");
-    showLabelBigscreenEach.innerText = "DATE";
-    const showLabelBigscreenEach2 = document.createElement("p");
-    showLabelBigscreenEach2.classList.add("show__label--bigscreen--each");
-    showLabelBigscreenEach2.innerText = "VENUE";
-    const showLabelBigscreenEach3 = document.createElement("p");
-    showLabelBigscreenEach3.classList.add("show__label--bigscreen--each");
-    showLabelBigscreenEach3.innerText = "LOCATION";
     
     const show = document.createElement("div");
     show.classList.add("show");
+    
     
     const showDate = document.createElement("div");
     showDate.classList.add("show__date");
@@ -96,13 +101,17 @@ function displayShowInfo(showList) {
     const showInfo3 = document.createElement("p");
     showInfo3.classList.add("show__info", "normal");
     showInfo3.innerText = showList.LOCATION;
-    
+
+
+    const showButton = document.createElement("div");
+    showButton.classList.add("show__button");
+
+    const showButtonInterior = document.createElement("button");
+    showButtonInterior.classList.add("show__button--interior");
+    showButtonInterior.innerText = "BUY TICKETS";
+
     
     mainSection.appendChild(showsSection);
-    showsSection.appendChild(showLabelBigscreen);
-    showLabelBigscreen.appendChild(showLabelBigscreenEach);
-    showLabelBigscreen.appendChild(showLabelBigscreenEach2);
-    showLabelBigscreen.appendChild(showLabelBigscreenEach3);
     showsSection.appendChild(show);
     show.appendChild(showDate);
     showDate.appendChild(showLabel1);
@@ -113,8 +122,6 @@ function displayShowInfo(showList) {
     show.appendChild(showLocation);
     showLocation.appendChild(showLabel3);
     showLocation.appendChild(showInfo3);
-
-
-
-
+    show.appendChild(showButton);
+    showButton.appendChild(showButtonInterior);
 }

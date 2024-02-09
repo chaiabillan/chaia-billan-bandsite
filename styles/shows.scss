@@ -266,16 +266,18 @@ main {
     &__title {
         @include page-header-section-header-mobile;
         padding-left: 16px;
+        margin-bottom: 0px;
     }
 
     &__contents {
-        height: 100px;
+        height: fit-content;
     }
 
     @include tablet {
         &__title {
             @include section-header-desktop;
             margin-left: 16px;
+            margin-bottom: 36px;
         }
     }
 
@@ -287,7 +289,7 @@ main {
 }
 
 .show {
-    padding: 0px 16px 16px 16px;
+    padding: 16px 16px 16px 16px;
     border-bottom: 1px solid $secondary-mercury;
     display: flex;
     flex-direction: column;

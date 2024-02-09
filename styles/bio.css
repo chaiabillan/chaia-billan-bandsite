@@ -413,6 +413,8 @@ body {
 .comment {
   display: flex;
   flex-direction: row;
+  border-bottom: 1px #E1E1E1 solid;
+  padding-bottom: 16px;
 }
 .comment__picture {
   padding-right: 16px;
@@ -440,7 +442,7 @@ body {
 .comment__form--field {
   border: 1px solid #E1E1E1;
   color: #000000;
-  padding: 12px;
+  padding: 9px;
   margin-bottom: 16px;
   background-color: #FAFAFA;
   border-radius: 4px;
@@ -498,6 +500,33 @@ body {
   .comment {
     padding: 16px 260px 0px 260px;
   }
+}
+
+.posts {
+  display: flex;
+}
+.posts__info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #323232;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+}
+.posts__info--name {
+  margin-bottom: 5px;
+}
+.posts__info--date {
+  color: #AFAFAF;
+  margin-bottom: 5px;
+}
+.posts__content {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+}
+.posts__content--inside {
+  margin-top: 5px;
+  margin-bottom: 0px;
 }
 
 .footer {

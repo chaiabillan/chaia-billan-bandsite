@@ -489,6 +489,9 @@ body {
 .comment {
     display: flex;
     flex-direction: row;
+    border-bottom: 1px $secondary-mercury solid;
+    padding-bottom: 16px;
+
 
     &__picture {
         padding-right: 16px;
@@ -509,6 +512,7 @@ body {
         flex-direction: column;
         width: 100%;
         height: 100%;
+        // border-bottom: 1px $secondary-mercury solid;
 
         &--label {
             @include labels-buttons-mobile;
@@ -518,7 +522,7 @@ body {
         &--field {
             border: 1px solid $secondary-mercury;
             color: $secondary-dark-black;
-            padding: 12px;
+            padding: 9px;
             margin-bottom: 16px;
             background-color: $secondary-alabaster;
             border-radius: 4px;
@@ -586,6 +590,36 @@ body {
 
     @include desktop {
         padding: 16px 260px 0px 260px;
+    }
+}
+
+.posts {
+    display: flex;
+
+    &__info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        color: $primary-black;
+        @include body-copy-mobile;
+
+        &--name {
+            margin-bottom: 5px;
+        }
+
+        &--date {
+            color: $primary-silver;
+            margin-bottom: 5px;
+        }
+    }
+
+    &__content {
+        @include body-copy-mobile;
+
+        &--inside {
+            margin-top: 5px;
+            margin-bottom: 0px;
+        }
     }
 }
 

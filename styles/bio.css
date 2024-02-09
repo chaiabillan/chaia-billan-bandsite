@@ -406,7 +406,7 @@ body {
 }
 @media (min-width: 1280px) {
   .join-convo {
-    padding: 32px 130px 16px 130px;
+    padding: 32px 130px 32px 130px;
   }
 }
 
@@ -471,11 +471,17 @@ body {
 }
 @media (min-width: 768px) {
   .comment {
-    padding: 16px 64px 0px 64px;
+    padding: 16px 16px 8px 16px;
+    margin-right: 64px;
+    margin-left: 64px;
   }
   .comment__picture--icon {
     height: 48px;
     width: 48px;
+  }
+  .comment__form {
+    padding-bottom: 14px;
+    padding-top: 6px;
   }
   .comment__form--label {
     font-size: 0.75rem;
@@ -498,7 +504,16 @@ body {
 }
 @media (min-width: 1280px) {
   .comment {
-    padding: 16px 260px 0px 260px;
+    padding: 16px 0px 0px 0px;
+    margin-right: 260px;
+    margin-left: 260px;
+  }
+  .comment__form--button {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .comment__form--button--content {
+    width: 35%;
   }
 }
 
@@ -527,6 +542,19 @@ body {
 .posts__content--inside {
   margin-top: 5px;
   margin-bottom: 0px;
+}
+@media (min-width: 768px) {
+  .posts {
+    padding-bottom: 27px;
+  }
+  .posts__info {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+  .posts__content {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
 }
 
 .footer {

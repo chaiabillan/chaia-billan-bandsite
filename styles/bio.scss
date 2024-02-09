@@ -482,7 +482,7 @@ body {
     }
 
     @include desktop {
-        padding: 32px 130px 16px 130px;
+        padding: 32px 130px 32px 130px;
     }
     
 }
@@ -555,7 +555,9 @@ body {
     }
 
     @include tablet {
-        padding: 16px 64px 0px 64px;
+        padding: 16px 16px 8px 16px;
+        margin-right: 64px;
+        margin-left: 64px;
 
         &__picture {
             &--icon {
@@ -565,6 +567,8 @@ body {
         }
 
         &__form {
+            padding-bottom: 14px;
+            padding-top: 6px;
 
             &--label {
                 @include labels-buttons-desktop;
@@ -589,7 +593,18 @@ body {
     }
 
     @include desktop {
-        padding: 16px 260px 0px 260px;
+        padding: 16px 0px 0px 0px;
+        margin-right: 260px;
+        margin-left: 260px;
+
+        &__form--button {
+            padding-top: 8px;
+            padding-bottom: 8px;
+
+            &--content {
+                width: 35%;
+            }
+        }
     }
 }
 
@@ -621,12 +636,19 @@ body {
             margin-bottom: 0px;
         }
     }
-}
 
-// #button {
-//     display: flex;
-//     justify-content: flex-end;
-// }
+    @include tablet {
+        padding-bottom: 27px;
+
+        &__info {
+            @include body-copy-desktop;
+        }
+
+        &__content {
+            @include body-copy-desktop;
+        }
+    }
+}
 
 .footer {
     color: $primary-white;

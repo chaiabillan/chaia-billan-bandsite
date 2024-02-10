@@ -86,27 +86,24 @@
             <div class="comment__picture">
                 <span class="comment__picture--icon"></span>
             </div>
-            <form class="comment__form">
-
-                <label class="comment__form--label normal">
-                    NAME
-                </label>
-                <input class="comment__form--field normal" type="text" name="name" placeholder="Enter your name">
-    
-                <label class="comment__form--label comment__form--comment normal">
-                    COMMENT
-                </label>
-                <textarea class="comment__form--field comment__form--field--comment normal" type="text" name="name" placeholder="Add a new comment"></textarea>
+            <form id = "add-comment-form" class="comment__form">
+                    <label class="comment__form--label normal">
+                        NAME
+                    </label>
+                    <input class="comment__form--field normal" type="text" name="name" placeholder="Enter your name">
+        
+                    <label class="comment__form--label comment__form--comment normal">
+                        COMMENT
+                    </label>
+                    <textarea class="comment__form--field comment__form--field--comment normal" type="text" name="comment" placeholder="Add a new comment"></textarea>
+                    
+                    <div class="comment__form--button">
+                        <button class="comment__form--button--content normal" type="submit">COMMENT</button>
+                    </div>
+                    <p id="add-comment-form-errors"></p> 
                 
-                <div class="comment__form--button">
-                    <button class="comment__form--button--content normal" type="submit">COMMENT</button>
-                </div>
-                <!-- <p id="message"></p> this would be for error message but thats diving deeper-->
             </form>
         </div>
-
-        
-
     </section>
 
 

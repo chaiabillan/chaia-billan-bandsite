@@ -410,10 +410,17 @@ body {
   }
 }
 
+#add-comment-form-errors {
+  height: 16px;
+  margin: 0px;
+}
+
 .comment {
   display: flex;
   flex-direction: row;
   border-bottom: 1px #E1E1E1 solid;
+}
+.comment--posted {
   padding-bottom: 16px;
 }
 .comment__picture {
@@ -471,16 +478,18 @@ body {
 }
 @media (min-width: 768px) {
   .comment {
-    padding: 16px 16px 8px 16px;
+    padding: 16px 16px 0px 16px;
     margin-right: 64px;
     margin-left: 64px;
+  }
+  .comment--posted {
+    padding-bottom: 16px;
   }
   .comment__picture--icon {
     height: 48px;
     width: 48px;
   }
   .comment__form {
-    padding-bottom: 14px;
     padding-top: 6px;
   }
   .comment__form--label {
@@ -507,6 +516,9 @@ body {
     padding: 16px 0px 0px 0px;
     margin-right: 260px;
     margin-left: 260px;
+  }
+  .comment--posted {
+    padding-bottom: 16px;
   }
   .comment__form--button {
     padding-top: 8px;

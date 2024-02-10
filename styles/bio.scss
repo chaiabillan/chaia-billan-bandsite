@@ -486,11 +486,20 @@ body {
     }
     
 }
+#add-comment-form-errors {
+    height: 16px;
+    margin: 0px;
+    //add letter styling once its done 
+}
+
 .comment {
     display: flex;
     flex-direction: row;
     border-bottom: 1px $secondary-mercury solid;
-    padding-bottom: 16px;
+    // padding-bottom: 16px;
+    &--posted {
+        padding-bottom: 16px;
+    }
 
 
     &__picture {
@@ -555,9 +564,13 @@ body {
     }
 
     @include tablet {
-        padding: 16px 16px 8px 16px;
+        padding: 16px 16px 0px 16px;
         margin-right: 64px;
         margin-left: 64px;
+
+        &--posted {
+            padding-bottom: 16px;
+        }
 
         &__picture {
             &--icon {
@@ -567,7 +580,7 @@ body {
         }
 
         &__form {
-            padding-bottom: 14px;
+            // padding-bottom: 14px;
             padding-top: 6px;
 
             &--label {
@@ -596,6 +609,10 @@ body {
         padding: 16px 0px 0px 0px;
         margin-right: 260px;
         margin-left: 260px;
+
+        &--posted {
+            padding-bottom: 16px;
+        }
 
         &__form--button {
             padding-top: 8px;

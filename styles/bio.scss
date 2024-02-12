@@ -77,10 +77,12 @@ body {
         &__subheading {
             padding-top: 1px;
             width: 7.125rem;
+            height: max-content;
 
             &--hover:hover {
-                border-bottom: 10px white solid;
-                padding-bottom: 40px;
+                border-bottom: 3px white solid;
+                padding-bottom: 23px;
+                
             }
 
             &--biography {
@@ -116,7 +118,8 @@ body {
 
             &--hover:hover {
                 border-bottom: 3px white solid;
-                padding-bottom: 55px;
+                padding-bottom: 33px;
+                color: $primary-white;
             }
 
             &--biography {
@@ -129,6 +132,7 @@ body {
             &--shows {
                 left: 83px;
                 top: 25px;
+                color: $secondary-mercury;
             }
         }
     }
@@ -513,6 +517,15 @@ body {
             border-radius: 50%;
             position: relative;
             top: 21px;
+
+            &--mohan {
+                background-image: url("../assets/images/Mohan-muruge.jpg");
+                background-size: cover;
+                // &:first-child {
+                //     background-image: url("../assets/images/Mohan-muruge.jpg");
+                //     background-size: cover;
+                // }
+            }
         }
     }
 
@@ -542,8 +555,14 @@ body {
                 opacity: 1;
             }
 
+            // &:focus {
+            //     border-color: black;
+            //     // box-shadow: 5px black;
+            // }
+
             &--comment {
                 padding-bottom: 50px;
+                // @include body-copy-mobile;
             }
         }
         
@@ -559,6 +578,26 @@ body {
                 width: 100%;
             }
             
+        }
+
+        &--bottom {
+            display: flex;
+            height: fit-content;
+
+            &--error {
+                display: flex;
+                width: 50%;
+                @include footer-copy-mobile;
+            }
+
+            &--clear {
+                display: flex;
+                width: 50%;
+                margin: 0px;
+                justify-content: flex-end;
+                @include footer-copy-mobile;
+                color: $primary-silver;
+            }
         }
 
     }
@@ -624,6 +663,10 @@ body {
         }
     }
 }
+
+// #add-comment-form-errors {
+//     width: 50%;
+// }
 
 .posts {
     display: flex;

@@ -44,7 +44,8 @@ showAllComments(postsList);
 
 //     displayPostInfo(postList);
 // }
-
+// const commentPictureIcon = document.createElement("span");
+//     commentPictureIcon.classList.add("comment__picture--icon", "comment__picture--icon--mohan"); //add 
 
 
 function displayPostInfo(postList) {
@@ -69,7 +70,7 @@ function displayPostInfo(postList) {
     // created a span that is the profile picture within comment__picture
     // class name is comment__picture--icon
     const commentPictureIcon = document.createElement("span");
-    commentPictureIcon.classList.add("comment__picture--icon");
+    commentPictureIcon.classList.add("comment__picture--icon"); //add , "comment__picture--icon--mohan:firstchild" 
 
     // created a div with classes comment__form and posts, added inside of comment
     // alongside commentpicture
@@ -140,7 +141,7 @@ function formatDate(date) {
 addCommentForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    // formErrors.innerText = "";
+    formErrors.innerText = "";
 
     const name = event.target.name.value;
     // const date = event.target.date.value;
@@ -150,6 +151,14 @@ addCommentForm.addEventListener("submit", (event) => {
     const formattedDate = formatDate(currentDate); //these two set the date
 
     //validation add after 
+    if (name === "") {
+        formErrors.innerText = "Name can not be empty";
+        return;
+    }
+    if (comment === "") {
+        formErrors.innerText = "Comment can not be empty";
+        return;
+    }
 
     const newComment = {
         name: name, 

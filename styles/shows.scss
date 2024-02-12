@@ -36,6 +36,8 @@ main {
         &--hover:hover {
             border-bottom: 4px white solid;
             padding-bottom: 7px;
+            color: $primary-white;
+
         }
 
         &--biography {
@@ -46,8 +48,8 @@ main {
             color: $primary-white;
             justify-content: center;
             @include subheader-mobile;
-            // border-bottom: 4px white solid;
-            // padding-bottom: 7px;
+            color: $secondary-mercury;
+            padding-bottom: 7px;
         }
 
         &--shows {
@@ -57,9 +59,8 @@ main {
             text-align: center;
             color: $primary-white;
             justify-content: center;
-            border-bottom: 4px white solid;
-            padding-bottom: 7px;
             @include subheader-mobile;
+            border-bottom: 4px white solid;
         }
 
         &--linkstyle {
@@ -79,18 +80,21 @@ main {
         &__subheading {
             padding-top: 1px;
             width: 7.125rem;
+            height: max-content;
 
             &--hover:hover {
-                border-bottom: 10px white solid;
-                padding-bottom: 40px;
+                border-bottom: 3px white solid;
+                padding-bottom: 35px;
+                
             }
 
             &--biography {
                 position: relative;
+                font-family: 'Avenir Next Regular';
                 top: 21px;
                 left: 60px;
                 // border-bottom: 3px white solid;
-                // padding-bottom: 35px;
+                padding-bottom: 35px;
                 height: 0.625rem;
             }
 
@@ -99,7 +103,7 @@ main {
                 left: 122px;
                 top: 21px;
                 border-bottom: 3px white solid;
-                // padding-bottom: 3px;
+                padding-bottom: 24px;
             }
         }
     }
@@ -114,16 +118,16 @@ main {
 
         &__subheading {
             padding-top: 1px;
-            padding-bottom: 55px;
+            padding-bottom: 45px;
             width: 7.125rem;
 
             &--hover:hover {
                 border-bottom: 3px white solid;
-                // padding-bottom: 50px;
+                padding-bottom: 45px;
             }
 
             &--biography {
-                font-family: 'Avenir Next Demi';
+                font-family: 'Avenir Next Regular';
                 // border-bottom: white 3px solid;
                 top: 25px;
                 left: 54px;
@@ -132,7 +136,7 @@ main {
             &--shows {
                 left: 83px;
                 top: 25px;
-                border-bottom: white 3px solid;
+                padding-bottom: 33px;
             }
         }
     }
@@ -183,10 +187,9 @@ main {
         &__soundcloud {
             display: flex;
             height: 95px;
-            background-color: white;
-            position: relative;
-            top: 128px;
-            width: 100%;
+            position: absolute;
+            top: 220px;
+            width: 288px;
             border-radius: 7px;
         }
     }
@@ -214,7 +217,7 @@ main {
             }
 
             &__soundcloud {
-                top: 250px;
+                top: 321px;
                 height: 136px;
                 width: 416px;
             }
@@ -242,6 +245,7 @@ main {
                 flex-direction: column;
                 position: relative;
                 height: 259px;
+                // margin: 0px;
 
                 &--song {
                     width: 504px;
@@ -251,8 +255,13 @@ main {
             &__soundcloud {
                 display: flex;
                 flex-direction: row;
-                top: 0px;
-            }
+                top: 232px;
+                right: 100px;
+    //             width: 100%;
+    // max-width: 300px; /* Set maximum width to prevent it from taking the entire width */
+    // border-radius: 7px;
+                
+            }//this isnt right 
         }
     }
 
@@ -293,6 +302,21 @@ main {
     border-bottom: 1px solid $secondary-mercury;
     display: flex;
     flex-direction: column;
+    background-color: $primary-white;
+
+    &--hover {
+        transition: 0.5s;
+    }
+    &--hover:hover {
+        background-color: $secondary-alabaster;
+    }
+
+    &--active {
+        transition: 0.5s;
+    }
+    &--active:active {
+        background-color: $secondary-mercury;
+    }
 
     &__label {
         @include labels-buttons-mobile;

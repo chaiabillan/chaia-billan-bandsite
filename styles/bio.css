@@ -94,10 +94,12 @@ body {
   .nav-bar__subheading {
     padding-top: 1px;
     width: 7.125rem;
+    height: -moz-max-content;
+    height: max-content;
   }
   .nav-bar__subheading--hover:hover {
-    border-bottom: 10px white solid;
-    padding-bottom: 40px;
+    border-bottom: 3px white solid;
+    padding-bottom: 23px;
   }
   .nav-bar__subheading--biography {
     position: relative;
@@ -129,7 +131,8 @@ body {
   }
   .nav-bar__subheading--hover:hover {
     border-bottom: 3px white solid;
-    padding-bottom: 55px;
+    padding-bottom: 33px;
+    color: #FFFFFF;
   }
   .nav-bar__subheading--biography {
     font-family: "Avenir Next Demi";
@@ -140,6 +143,7 @@ body {
   .nav-bar__subheading--shows {
     left: 83px;
     top: 25px;
+    color: #E1E1E1;
   }
 }
 
@@ -435,6 +439,10 @@ body {
   position: relative;
   top: 21px;
 }
+.comment__picture--icon--mohan {
+  background-image: url("../assets/images/Mohan-muruge.jpg");
+  background-size: cover;
+}
 .comment__form {
   display: flex;
   flex-direction: column;
@@ -475,6 +483,26 @@ body {
   font-size: 0.875rem;
   line-height: 1.375rem;
   width: 100%;
+}
+.comment__form--bottom {
+  display: flex;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.comment__form--bottom--error {
+  display: flex;
+  width: 50%;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+}
+.comment__form--bottom--clear {
+  display: flex;
+  width: 50%;
+  margin: 0px;
+  justify-content: flex-end;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  color: #AFAFAF;
 }
 @media (min-width: 768px) {
   .comment {

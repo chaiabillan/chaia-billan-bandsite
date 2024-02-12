@@ -72,7 +72,7 @@ for (let i = 0; i < showsList.length; i++) {
 function displayShowInfo(showList) {
     
     const show = document.createElement("div");
-    show.classList.add("show");
+    show.classList.add("show", "show--hover", "show--active");
     
     
     const showDate = document.createElement("div");

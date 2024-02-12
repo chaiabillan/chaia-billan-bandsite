@@ -10,9 +10,9 @@ main {
     overflow-x: hidden;
 }
 
-// * {
-//     border: red 1px dotted;
-// }
+* {
+    border: red 1px dotted;
+}
 
 .nav-bar {
     background-color: $primary-black;
@@ -160,12 +160,16 @@ main {
         display: flex;
         flex-direction: column;
         padding: 14px;
+        height: -webkit-fill-available;
+
 
         &__title {
             display: flex;
             flex-direction: column;
-            position: absolute;
+            // position: absolute;
             color: white;
+            height: 116px;
+            padding-bottom: 16px;
     
             &--album {
                 @include subheader-mobile;
@@ -187,7 +191,8 @@ main {
         &__soundcloud {
             display: flex;
             height: 95px;
-            position: absolute;
+            // position: absolute;
+            z-index: 3;
             top: 220px;
             width: 288px;
             border-radius: 7px;
@@ -204,6 +209,13 @@ main {
 
         &__content {
             padding: 34px;
+            height: 430px;
+            
+
+            &__title {
+                height: 208px;
+                position: relative;
+            }
 
             &__title--album {
                 font-size: 24px;
@@ -239,6 +251,7 @@ main {
             align-items: center;
             justify-content: space-evenly;
             width: 100%;
+            height: auto;
 
             &__title {
                 display: flex;
@@ -254,9 +267,12 @@ main {
 
             &__soundcloud {
                 display: flex;
-                flex-direction: row;
-                top: 232px;
-                right: 100px;
+                position: relative;
+                top: 0px;
+                // flex-direction: row;
+                // top: 232px;
+                // right: 100px;
+                max-width: 400px;
     //             width: 100%;
     // max-width: 300px; /* Set maximum width to prevent it from taking the entire width */
     // border-radius: 7px;
@@ -288,6 +304,9 @@ main {
             margin-left: 16px;
             margin-bottom: 36px;
         }
+        &__contents {
+            max-width: max-content;
+        }
     }
 
     @include desktop {
@@ -314,7 +333,7 @@ main {
     &--active {
         transition: 0.5s;
     }
-    &--active:active {
+    &--active:target {
         background-color: $secondary-mercury;
     }
 
@@ -331,6 +350,7 @@ main {
             color: $primary-silver;
             margin: 0px;
             display: none;
+
         }
     }
 
@@ -379,13 +399,14 @@ main {
                 @include labels-buttons-desktop;
 
                 &--each {
-                    width: 11.5rem;
+                    min-width: 10.5rem;
                 }
             }
         }
 
         &__info {
             @include body-copy-desktop;
+            min-width: 10.5rem;
         }
 
         &__button {
@@ -399,11 +420,13 @@ main {
     @include desktop {
 
         &__label {
+
             &--bigscreen {
+
                 &--each {
                     min-width: 13.5rem;
+                    // min-width: 20.5rem;
                 }
-
             }
         }
         &__info {

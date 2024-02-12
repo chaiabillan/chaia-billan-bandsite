@@ -40,6 +40,10 @@ main {
   overflow-x: hidden;
 }
 
+* {
+  border: red 1px dotted;
+}
+
 .nav-bar {
   background-color: #323232;
   display: flex;
@@ -170,12 +174,14 @@ main {
   display: flex;
   flex-direction: column;
   padding: 14px;
+  height: -webkit-fill-available;
 }
 .hero__content__title {
   display: flex;
   flex-direction: column;
-  position: absolute;
   color: white;
+  height: 116px;
+  padding-bottom: 16px;
 }
 .hero__content__title--album {
   font-size: 0.875rem;
@@ -193,7 +199,7 @@ main {
 .hero__content__soundcloud {
   display: flex;
   height: 95px;
-  position: absolute;
+  z-index: 3;
   top: 220px;
   width: 288px;
   border-radius: 7px;
@@ -207,6 +213,11 @@ main {
   }
   .hero__content {
     padding: 34px;
+    height: 430px;
+  }
+  .hero__content__title {
+    height: 208px;
+    position: relative;
   }
   .hero__content__title--album {
     font-size: 24px;
@@ -238,6 +249,7 @@ main {
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
+    height: auto;
   }
   .hero__content__title {
     display: flex;
@@ -250,9 +262,9 @@ main {
   }
   .hero__content__soundcloud {
     display: flex;
-    flex-direction: row;
-    top: 232px;
-    right: 100px;
+    position: relative;
+    top: 0px;
+    max-width: 400px;
   }
 }
 
@@ -276,6 +288,10 @@ main {
     line-height: 2.75rem;
     margin-left: 16px;
     margin-bottom: 36px;
+  }
+  .shows-section__contents {
+    max-width: -moz-max-content;
+    max-width: max-content;
   }
 }
 @media (min-width: 1280px) {
@@ -302,7 +318,7 @@ main {
 .show--active {
   transition: 0.5s;
 }
-.show--active:active {
+.show--active:target {
   background-color: #E1E1E1;
 }
 .show__label {
@@ -365,11 +381,12 @@ main {
     line-height: 1.25rem;
   }
   .show__label--bigscreen--each {
-    width: 11.5rem;
+    min-width: 10.5rem;
   }
   .show__info {
     font-size: 0.875rem;
     line-height: 1.375rem;
+    min-width: 10.5rem;
   }
   .show__button--interior {
     width: 150px;

@@ -231,7 +231,7 @@ body {
         @include subheader-mobile;
         margin: 0px;
         color: $secondary-dark-black;
-        width: 200px
+        width: 12.5rem
     }
 
     &__content {
@@ -420,7 +420,7 @@ body {
 }
 
 #add-comment-form-errors {
-    height: 16px;
+    height: 1rem;
     margin: 0px;
 }
 
@@ -439,8 +439,8 @@ body {
 
         &--icon {
             display: block;
-            height: 36px;
-            width: 36px;
+            height: 2.25rem;
+            width: 2.25rem;
             background-color: $secondary-mercury;
             border-radius: 50%;
             position: relative;
@@ -531,8 +531,8 @@ body {
 
         &__picture {
             &--icon {
-                height: 48px;
-                width: 48px;
+                height: 3rem;
+                width: 3rem;
             }
         }
 

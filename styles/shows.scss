@@ -137,14 +137,14 @@ main {
 }
 
 .hero {
-    height: 268px;
+    height: 16.75rem;
     width: 100%;
     background: rgba(50, 50, 50);
     overflow: hidden;
 
     &__image {
         object-fit: cover;
-        height: 268px;
+        height: 16.75rem;
         width: 100%;
         opacity: 0.5;
         position: absolute;
@@ -161,7 +161,7 @@ main {
             display: flex;
             flex-direction: column;
             color: white;
-            height: 116px;
+            height: 7.25rem;
             padding-bottom: 16px;
     
             &--album {
@@ -174,63 +174,63 @@ main {
                 @include page-header-section-header-mobile;
                 position: relative;
                 bottom: 24px;
-                width: 205px;
+                width: 12.8125rem;
             }
         }
     
         &__soundcloud {
             display: flex;
-            height: 95px;
+            height: 5.9375rem;
             z-index: 3;
             top: 220px;
-            width: 288px;
+            width: 18rem;
             border-radius: 7px;
         }
     }
 
     @include tablet {
-        height: 485px;
+        height: 30.3125rem;
 
         &__image {
-            height: 485px;
+            height: 30.3125rem;
 
         }
 
         &__content {
             padding: 34px;
-            height: 430px;
+            height: 26.875rem;
             
 
             &__title {
-                height: 208px;
+                height: 13rem;
                 position: relative;
             }
 
             &__title--album {
-                font-size: 24px;
+                font-size: 1.5rem;
             }
 
             &__title--song {
-                font-size: 60px;
-                line-height: 70px;
+                font-size: 3.75rem;
+                line-height: 4.375rem;
                 bottom: 76px;
                 width: 600px;
             }
 
             &__soundcloud {
                 top: 321px;
-                height: 136px;
-                width: 416px;
+                height: 8.5rem;
+                width: 26rem;
             }
         }
     }
 
     @include desktop {
-        height: 622px;
+        height: 38.875rem;
         display: flex;
 
         &__image {
-            height: 622px;
+            height: 38.875rem;
         }
 
         &__content {
@@ -246,10 +246,10 @@ main {
                 display: flex;
                 flex-direction: column;
                 position: relative;
-                height: 259px;
+                height: 16.1875rem;
 
                 &--song {
-                    width: 504px;
+                    width: 31.5rem;
                 }
             }
 
@@ -257,7 +257,7 @@ main {
                 display: flex;
                 position: relative;
                 top: 0px;
-                max-width: 400px;
+                max-width: 25rem;
             }
         }
     }
@@ -343,7 +343,7 @@ main {
     }
 
     &__button {
-        height: 40px;
+        height: 2.5rem;
 
 
         &--interior { 
@@ -392,7 +392,7 @@ main {
         &__button {
 
             &--interior {
-                width: 150px;
+                width: 9.375rem;
             }
         }
     }

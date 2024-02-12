@@ -153,7 +153,7 @@ main {
 }
 
 .hero {
-  height: 268px;
+  height: 16.75rem;
   width: 100%;
   background: rgb(50, 50, 50);
   overflow: hidden;
@@ -161,7 +161,7 @@ main {
 .hero__image {
   -o-object-fit: cover;
      object-fit: cover;
-  height: 268px;
+  height: 16.75rem;
   width: 100%;
   opacity: 0.5;
   position: absolute;
@@ -176,7 +176,7 @@ main {
   display: flex;
   flex-direction: column;
   color: white;
-  height: 116px;
+  height: 7.25rem;
   padding-bottom: 16px;
 }
 .hero__content__title--album {
@@ -190,53 +190,53 @@ main {
   line-height: 2rem;
   position: relative;
   bottom: 24px;
-  width: 205px;
+  width: 12.8125rem;
 }
 .hero__content__soundcloud {
   display: flex;
-  height: 95px;
+  height: 5.9375rem;
   z-index: 3;
   top: 220px;
-  width: 288px;
+  width: 18rem;
   border-radius: 7px;
 }
 @media (min-width: 768px) {
   .hero {
-    height: 485px;
+    height: 30.3125rem;
   }
   .hero__image {
-    height: 485px;
+    height: 30.3125rem;
   }
   .hero__content {
     padding: 34px;
-    height: 430px;
+    height: 26.875rem;
   }
   .hero__content__title {
-    height: 208px;
+    height: 13rem;
     position: relative;
   }
   .hero__content__title--album {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
   .hero__content__title--song {
-    font-size: 60px;
-    line-height: 70px;
+    font-size: 3.75rem;
+    line-height: 4.375rem;
     bottom: 76px;
     width: 600px;
   }
   .hero__content__soundcloud {
     top: 321px;
-    height: 136px;
-    width: 416px;
+    height: 8.5rem;
+    width: 26rem;
   }
 }
 @media (min-width: 1280px) {
   .hero {
-    height: 622px;
+    height: 38.875rem;
     display: flex;
   }
   .hero__image {
-    height: 622px;
+    height: 38.875rem;
   }
   .hero__content {
     display: flex;
@@ -251,16 +251,16 @@ main {
     display: flex;
     flex-direction: column;
     position: relative;
-    height: 259px;
+    height: 16.1875rem;
   }
   .hero__content__title--song {
-    width: 504px;
+    width: 31.5rem;
   }
   .hero__content__soundcloud {
     display: flex;
     position: relative;
     top: 0px;
-    max-width: 400px;
+    max-width: 25rem;
   }
 }
 
@@ -342,7 +342,7 @@ main {
   min-width: 11rem;
 }
 .show__button {
-  height: 40px;
+  height: 2.5rem;
 }
 .show__button--interior {
   background-color: #323232;
@@ -385,7 +385,7 @@ main {
     min-width: 10.5rem;
   }
   .show__button--interior {
-    width: 150px;
+    width: 9.375rem;
   }
 }
 @media (min-width: 1280px) {

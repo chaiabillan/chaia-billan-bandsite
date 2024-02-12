@@ -6,10 +6,7 @@ body {
     margin: 0rem;
     overflow-x: hidden;
 }
-// * {
-//     // margin: 0rem;
-//     overflow-x: hidden;
-// }
+
 // * {
 //     border: red 1px dotted;
 // }
@@ -194,70 +191,6 @@ body {
             padding-left: 134px;
         }
     }
-
-    // &__image {
-    //     width: 100%;
-    //     position: relative;
-    //     height: 11.6875rem;
-    //     object-fit: cover;
-
-    //     &--overlay {
-    //         position: absolute;
-    //         height: 11.6875rem;
-    //         top: 79px;
-    //         left: 0;
-    //         right: 0;
-    //         bottom: 0;
-    //         background-color: rgba(50, 50, 50, 0.5);
-    //         z-index: 1;
-    //     }
-    // }
-    
-    // &__title {
-    //     color: $primary-white;
-    //     top: 72px;
-    //     left: 10px;
-    //     position: absolute;
-    //     -ms-transform: translateY(-50%);
-    //     transform: translateY(-50%);
-    //     @include page-header-section-header-mobile;
-    //     z-index: 2;
-    // }
-
-    // @include tablet {
-
-    //     &__image {
-    //         height: 28.0625rem;
-
-    //         &--overlay {
-    //             top: 72px;
-    //             height: 28.0625rem;
-    //         }
-    //     }
-
-    //     &__title {
-    //         @include page-header-desktop;
-    //         top: 157px;
-    //         left: 40px;
-    //     }
-    // }
-
-    // @include desktop {
-
-    //     &__image {
-    //         height: 39.25rem;
-
-    //         &--overlay {
-    //             top: 85px;
-    //             height: 39.25rem;
-    //         }
-    //     }
-
-    //     &__title {
-    //         top: 238px;
-    //         left: 103px;
-    //     }
-    // }
 }
 
 .biography {
@@ -468,10 +401,10 @@ body {
 }
 
 .join-convo {
-    height:fit-content; //do we even need this
+    height:fit-content; 
     padding: 16px;
 
-    &__title { //prob needs to be moved down
+    &__title { 
         @include page-header-section-header-mobile;
         margin: 0px;
         padding-bottom: 10px;
@@ -487,20 +420,19 @@ body {
 
     @include desktop {
         padding: 32px 130px 32px 130px;
-    }
-    
+    }    
 }
+
 #add-comment-form-errors {
     height: 16px;
     margin: 0px;
-    //add letter styling once its done 
 }
 
 .comment {
     display: flex;
     flex-direction: row;
     border-bottom: 1px $secondary-mercury solid;
-    // padding-bottom: 16px;
+
     &--posted {
         padding-bottom: 16px;
     }
@@ -521,10 +453,6 @@ body {
             &--mohan {
                 background-image: url("../assets/images/Mohan-muruge.jpg");
                 background-size: cover;
-                // &:first-child {
-                //     background-image: url("../assets/images/Mohan-muruge.jpg");
-                //     background-size: cover;
-                // }
             }
         }
     }
@@ -534,7 +462,6 @@ body {
         flex-direction: column;
         width: 100%;
         height: 100%;
-        // border-bottom: 1px $secondary-mercury solid;
 
         &--label {
             @include labels-buttons-mobile;
@@ -555,21 +482,14 @@ body {
                 opacity: 1;
             }
 
-            // &:focus {
-            //     border-color: black;
-            //     // box-shadow: 5px black;
-            // }
-
             &--comment {
                 padding-bottom: 50px;
-                // @include body-copy-mobile;
             }
         }
         
         &--button {
 
             &--content {
-                // margin-top: 16px;
                 background-color: $primary-black;
                 color: $primary-white;
                 border-radius: 4px;
@@ -619,7 +539,6 @@ body {
         }
 
         &__form {
-            // padding-bottom: 14px;
             padding-top: 6px;
 
             &--label {
@@ -663,10 +582,6 @@ body {
         }
     }
 }
-
-// #add-comment-form-errors {
-//     width: 50%;
-// }
 
 .posts {
     display: flex;

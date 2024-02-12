@@ -55,19 +55,11 @@ showsSection.appendChild(showLabelBigscreen);
     showLabelBigscreen.appendChild(showLabelBigscreenEach2);
     showLabelBigscreen.appendChild(showLabelBigscreenEach3);
 
-
-
-
-
 for (let i = 0; i < showsList.length; i++) {
     const showList = showsList[i];
     
     displayShowInfo(showList);
 }
-
-
-
-
 
 function displayShowInfo(showList) {
     

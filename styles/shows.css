@@ -40,10 +40,6 @@ main {
   overflow-x: hidden;
 }
 
-* {
-  border: red 1px dotted;
-}
-
 .nav-bar {
   background-color: #323232;
   display: flex;
@@ -318,7 +314,7 @@ main {
 .show--active {
   transition: 0.5s;
 }
-.show--active:target {
+.show--active:active {
   background-color: #E1E1E1;
 }
 .show__label {

@@ -10,9 +10,9 @@ main {
     overflow-x: hidden;
 }
 
-* {
-    border: red 1px dotted;
-}
+// * {
+//     border: red 1px dotted;
+// }
 
 .nav-bar {
     background-color: $primary-black;
@@ -166,7 +166,6 @@ main {
         &__title {
             display: flex;
             flex-direction: column;
-            // position: absolute;
             color: white;
             height: 116px;
             padding-bottom: 16px;
@@ -175,15 +174,12 @@ main {
                 @include subheader-mobile;
                 position: relative;
                 top: 1px;
-                // left: 14px;
             }
     
             &--song {
                 @include page-header-section-header-mobile;
                 position: relative;
                 bottom: 24px;
-                // height: 50px;
-                // left: 14px;
                 width: 205px;
             }
         }
@@ -191,7 +187,6 @@ main {
         &__soundcloud {
             display: flex;
             height: 95px;
-            // position: absolute;
             z-index: 3;
             top: 220px;
             width: 288px;
@@ -258,7 +253,6 @@ main {
                 flex-direction: column;
                 position: relative;
                 height: 259px;
-                // margin: 0px;
 
                 &--song {
                     width: 504px;
@@ -269,18 +263,10 @@ main {
                 display: flex;
                 position: relative;
                 top: 0px;
-                // flex-direction: row;
-                // top: 232px;
-                // right: 100px;
                 max-width: 400px;
-    //             width: 100%;
-    // max-width: 300px; /* Set maximum width to prevent it from taking the entire width */
-    // border-radius: 7px;
-                
-            }//this isnt right 
+            }
         }
     }
-
 }
 
 
@@ -333,7 +319,7 @@ main {
     &--active {
         transition: 0.5s;
     }
-    &--active:target {
+    &--active:active {
         background-color: $secondary-mercury;
     }
 
@@ -366,7 +352,7 @@ main {
         height: 40px;
 
 
-        &--interior { //consdier making a button mixin because this is the exact same as comment button on other page
+        &--interior { 
             background-color: $primary-black;
             color: $primary-white;
             border-radius: 4px;
@@ -425,7 +411,6 @@ main {
 
                 &--each {
                     min-width: 13.5rem;
-                    // min-width: 20.5rem;
                 }
             }
         }
@@ -434,12 +419,6 @@ main {
         }
     }
 }
-
-
-
-
-
-
 
 .footer {
     color: $primary-white;

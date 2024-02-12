@@ -37,64 +37,31 @@ function showAllComments(postsList) {
 
 showAllComments(postsList);
 
-//do this afterwards
-
-// for (let i = 0; i < postsList.length; i++) {
-//     const postList = postsList[i];
-
-//     displayPostInfo(postList);
-// }
-// const commentPictureIcon = document.createElement("span");
-//     commentPictureIcon.classList.add("comment__picture--icon", "comment__picture--icon--mohan"); //add 
-
-
 function displayPostInfo(postList) {
 
-    //so now i think make a div that will contain all the comments.. 
-    // but this shouldnt be looped over, 
-    // so make a div called commentsposted 
-    // commentsPosted.appendChild(comment)
-    //and this should probably be done outside of this function because then all these
-    //new comments will be added inside when for loop runs 
-    //actually first you have to add it to join convo section 
-
-    //creating a div with class called comment 
-    //note that theres already a div with class = comment above this one
     const comment = document.createElement("div");
     comment.classList.add("comment", "comment--posted");
 
-    //creating a div within comment, with the class comment__picture  
     const commentPicture = document.createElement("div");
     commentPicture.classList.add("comment__picture");
 
-    // created a span that is the profile picture within comment__picture
-    // class name is comment__picture--icon
     const commentPictureIcon = document.createElement("span");
-    commentPictureIcon.classList.add("comment__picture--icon"); //add , "comment__picture--icon--mohan:firstchild" 
+    commentPictureIcon.classList.add("comment__picture--icon"); 
 
-    // created a div with classes comment__form and posts, added inside of comment
-    // alongside commentpicture
-    //note that comment__form is being reused for styling from 1st "comment" section
-    // which is where you actually submit a comment 
     const commentForm = document.createElement("div");
     commentForm.classList.add("comment__form", "posts");
 
-    //created a div that is contains name and date, added inside of commentform 
     const postsInfo = document.createElement("div");
     postsInfo.classList.add("posts__info");
 
-    //created p inside of postsinfo with posts__info--name class that has user-name
     const postInfoName = document.createElement("p");
     postInfoName.classList.add("posts__info--name", "demi");
     postInfoName.innerText = postList.name;
 
-    ////created another p inside of postsinfo with posts__info--name class that has 
-    //the date of post
     const postInfoDate = document.createElement("p");
     postInfoDate.classList.add("posts__info--date", "normal");
     postInfoDate.innerText = postList.date;
 
-    //div inside of commentform that contains p which contains the actual comment  
     const postContent = document.createElement("div");
     postContent.classList.add("posts__content");
 
@@ -102,28 +69,20 @@ function displayPostInfo(postList) {
     postContentInside.classList.add("posts__content--inside", "normal");
     postContentInside.innerText = postList.comment;
 
-    //the div created on line 34 to the joinconvo sectino 
     commentsPosted.appendChild(comment);
 
-    //adding commentpicture (div cr. on line 38) as a child of comment 
     comment.appendChild(commentPicture);
 
-    // added the span (cr. ln43) for the profile pic as a child inside of commentpicture
     commentPicture.appendChild(commentPictureIcon);
 
-    //comentform added as child to comment 
     comment.appendChild(commentForm);
 
-    //postsinfo added as child to commentform
     commentForm.appendChild(postsInfo);
 
-    //postinfoname added as child to postsinfo 
     postsInfo.appendChild(postInfoName);
 
-    //postinfodate added as another child to postsinfo 
     postsInfo.appendChild(postInfoDate);
 
-    //post content added as yet another child into commentform 
     commentForm.appendChild(postContent);
     postContent.appendChild(postContentInside);
 }
@@ -136,7 +95,7 @@ function formatDate(date) {
     const day = date.getDate();
     const year = date.getFullYear();
     return `${month}/${day}/${year}`;
-} //set the date
+} 
 
 addCommentForm.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -144,13 +103,11 @@ addCommentForm.addEventListener("submit", (event) => {
     formErrors.innerText = "";
 
     const name = event.target.name.value;
-    // const date = event.target.date.value;
     const comment = event.target.comment.value;
 
     const currentDate = new Date();
-    const formattedDate = formatDate(currentDate); //these two set the date
+    const formattedDate = formatDate(currentDate); 
 
-    //validation add after 
     if (name === "") {
         formErrors.innerText = "Name can not be empty";
         return;
@@ -162,7 +119,7 @@ addCommentForm.addEventListener("submit", (event) => {
 
     const newComment = {
         name: name, 
-        date: formattedDate, //sets the date
+        date: formattedDate, 
         comment: comment
     }
 

@@ -10,10 +10,6 @@ main {
     overflow-x: hidden;
 }
 
-// * {
-//     border: red 1px dotted;
-// }
-
 .nav-bar {
     background-color: $primary-black;
     display: flex;
@@ -93,7 +89,6 @@ main {
                 font-family: 'Avenir Next Regular';
                 top: 21px;
                 left: 60px;
-                // border-bottom: 3px white solid;
                 padding-bottom: 35px;
                 height: 0.625rem;
             }
@@ -128,7 +123,6 @@ main {
 
             &--biography {
                 font-family: 'Avenir Next Regular';
-                // border-bottom: white 3px solid;
                 top: 25px;
                 left: 54px;
             }

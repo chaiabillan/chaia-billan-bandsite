@@ -16,7 +16,6 @@ const postsList = [
     }
 ]
 
-
 const joinConvo = document.querySelector(".join-convo");
 
 const commentsPosted = document.createElement("div");
@@ -134,7 +133,6 @@ addCommentForm.addEventListener("submit", (event) => {
 const clearButton = document.querySelector(".comment__form--bottom--clear");
 
 clearButton.addEventListener("click", function(event) {
-    // event.stopPropagation();
     event.preventDefault();
     commentsPosted.classList.toggle("hide-comments");
     if (commentsPosted.classList.contains("hide-comments")) {

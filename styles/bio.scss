@@ -517,6 +517,8 @@ body {
                 justify-content: flex-end;
                 @include footer-copy-mobile;
                 color: $primary-silver;
+                border: none;
+                background-color: $primary-white;
             }
         }
 
@@ -812,4 +814,7 @@ body {
             bottom: 1px;
         }
     }
+}
+.hide-comments {
+    display: none;
 }

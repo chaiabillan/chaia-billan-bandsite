@@ -503,6 +503,8 @@ body {
   font-size: 0.8125rem;
   line-height: 1.125rem;
   color: #AFAFAF;
+  border: none;
+  background-color: #FFFFFF;
 }
 @media (min-width: 768px) {
   .comment {
@@ -751,4 +753,8 @@ body {
   .footer__limitless {
     bottom: 1px;
   }
+}
+
+.hide-comments {
+  display: none;
 }/*# sourceMappingURL=bio.css.map */

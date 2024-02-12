@@ -23,7 +23,6 @@ const commentsPosted = document.createElement("div");
 commentsPosted.classList.add("comment__posted");
 joinConvo.appendChild(commentsPosted);
 
-
 function showAllComments(postsList) {
 
     commentsPosted.innerHTML = "";
@@ -130,3 +129,19 @@ addCommentForm.addEventListener("submit", (event) => {
 
     showAllComments(postsList);
 });
+
+
+const clearButton = document.querySelector(".comment__form--bottom--clear");
+
+clearButton.addEventListener("click", function(event) {
+    // event.stopPropagation();
+    event.preventDefault();
+    commentsPosted.classList.toggle("hide-comments");
+    if (commentsPosted.classList.contains("hide-comments")) {
+        clearButton.innerText = "Show Comments";
+    } else {
+        clearButton.innerText = "Clear Comments";
+    }
+});
+
+commentsPosted.classList.remove("hide-comments");

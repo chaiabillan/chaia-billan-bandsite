@@ -7,3 +7,8 @@ $secondary-alabaster: #FAFAFA;
 
 $overlay-color: rgba($primary-black, 0.5);
 
+// After registering and obtaining the API key, you'll need to append ?api_key=<your_api_key_here> to each of your API request URLs 
+// (except for /register). This is how you authenticate yourself with the API and gain access to its resources.
+// {"api_key":"fcd7625b-d264-4d99-a235-8cf6b1fa3b0c"}
+// const api-key = "fcd7625b-d264-4d99-a235-8cf6b1fa3b0c";
+$api-key: "fcd7625b-d264-4d99-a235-8cf6b1fa3b0c";

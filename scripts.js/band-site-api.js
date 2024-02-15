@@ -1,145 +1,51 @@
 
 
-const apiKey = "fcd7625b-d264-4d99-a235-8cf6b1fa3b0c";
+const api_Key = "e188b0dc-f96c-404c-b07d-02187699d73e";
 
 
 // // https://unit-2-project-api-25c1595833b2.herokuapp.com/comments?api_key=fcd7625b-d264-4d99-a235-8cf6b1fa3b0&comment="hello"
 class BandSiteApi {
-    constructor(apiKey) {
-        this.apiKey = apiKey;
-        this.baseUrl = 'https://unit-2-project-api-25c1595833b2.herokuapp.com';
+    constructor(api_Key) {
+        this.apiKey = api_Key;
+        this.baseUrl = "https://unit-2-project-api-25c1595833b2.herokuapp.com";
         this.comment = "comments";
         this.show = "showdates";
     }
 
-    async postComment() {
-        const newComment = await axios.post(
-            `${this.baseUrl}/${this.comment}?apiKey=${this.apiKey}`
+    async postComment(commentObject) { //this function gets the comment data from the API
+        const newComment = await axios.post( //in this case, were trying to add data to this API. it should hold some data within this function but lets get to that later
+            `${this.baseUrl}/${this.comment}?api_key=${this.apiKey}`, // https://unit-2-project-api-25c1595833b2.herokuapp.com/comments?api_key=fcd7625b-d264-4d99-a235-8cf6b1fa3b0&comment="hello"
+            commentObject //this is what were actually posting...
         );
-        console.log(this.comment);
-        return newComment.data;
-        // console.log(commentObject.data);
-        
+        // console.log(this.comment);
+        return newComment.data; //returns the info that we posted?? why?        
     }
     
     async getComments() {
         const postedComment = await axios.get(
-            `${this.baseUrl}/${this.comment}?apiKey=${this.apiKey}`
-        )
-        console.log(this.comment);
+            `${this.baseUrl}/${this.comment}?api_key=${this.apiKey}`
+        );
+        // console.log(this.comment);
         return postedComment.data;
-    }
+    } //afterwards, make sure this sorts the array in order 
 
     async getShows() {
         const show = await axios.get(
-            `${this.baseUrl}/${this.show}?apiKey=${this.apiKey}`
-        )
+            `${this.baseUrl}/${this.show}?api_key=${this.apiKey}`
+        );
         return show.data;
     }
-}
+};
 
-const apiClient = new BandSiteApi(apiKey);
-console.log(apiClient);
+const apiClient = new BandSiteApi("api_Key");
+// console.log(apiClient);
 
+const renderComments = async () => {
+    const comment1 = await apiClient.getComments();
 
+    console.log(comment1);
+};
+renderComments();
 
-
-
-// // const getComment = async () => {
-// //     const retrieveComment = await apiClient.getComments();
-// //     console.log(retrieveComment);
-// // }
-// (async () => {
-//     try {
-//         // Retrieve comments
-//         const retrieveComment = await apiClient.getComments();
-//         console.log("Retrieved Comments:", retrieveComment);
-
-//         // Post a new comment
-//         const newCommentObject = {
-//             name: "chaia",
-//             comment: "hello"
-//         };
-//         const postedComment = await apiClient.postComment(newCommentObject);
-//         console.log("Posted Comment:", postedComment);
-
-//         // Retrieve shows
-//         const retrieveShows = await apiClient.getShows();
-//         console.log("Retrieved Shows:", retrieveShows);
-//     } catch (error) {
-//         console.error("Error:", error);
-//     }
-// });
-
-// console.log(apiClient.postComment());
-
-// const apiKey = "fcd7625b-d264-4d99-a235-8cf6b1fa3b0c";
-
-// class BandSiteApi {
-//     constructor(apiKey) {
-//         this.apiKey = apiKey;
-//         this.baseUrl = 'https://unit-2-project-api-25c1595833b2.herokuapp.com';
-//         this.comment = "comments";
-//         this.show = "showdates";
-//     }
-
-//     async postComment(commentObject) {
-//         try {
-//             const newComment = await axios.post(
-//                 `${this.baseUrl}/${this.comment}?apiKey=${this.apiKey}`,
-//                 commentObject
-//             );
-//             return newComment.data;
-//         } catch (error) {
-//             console.error("Error posting comment:", error);
-//         }
-//     }
-    
-//     async getComments() {
-//         try {
-//             const postedComment = await axios.get(
-//                 `${this.baseUrl}/${this.comment}?apiKey=${this.apiKey}`
-//             );
-//             return postedComment.data;
-//         } catch (error) {
-//             console.error("Error retrieving comments:", error);
-//         }
-//     }
-
-//     async getShows() {
-//         try {
-//             const show = await axios.get(
-//                 `${this.baseUrl}/${this.show}?apiKey=${this.apiKey}`
-//             );
-//             return show.data;
-//         } catch (error) {
-//             console.error("Error retrieving shows:", error);
-//         }
-//     }
-// }
-
-// const apiClient = new BandSiteApi(apiKey);
-
-// // Example usage
-// (async () => {
-//     try {
-//         // Retrieve comments
-//         const retrieveComment = await apiClient.getComments();
-//         console.log("Retrieved Comments:", retrieveComment);
-
-//         // Post a new comment
-//         const newCommentObject = {
-//             name: "chaia",
-//             comment: "hello"
-//         };
-//         const postedComment = await apiClient.postComment(newCommentObject);
-//         console.log("Posted Comment:", postedComment);
-
-//         // Retrieve shows
-//         const retrieveShows = await apiClient.getShows();
-//         console.log("Retrieved Shows:", retrieveShows);
-//     } catch (error) {
-//         console.error("Error:", error);
-//     }
-// });
+// search on youtube explanation of getting information from a web api and posting it to the backend of your website
 

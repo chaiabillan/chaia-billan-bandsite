@@ -14,22 +14,25 @@ const postsList = [
         date: "10/20/2023",
         comment: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."
     }
-]
+];
 
+//entire comment section 
 const joinConvo = document.querySelector(".join-convo");
 
+// this holds the previously posted(default) comments 
 const commentsPosted = document.createElement("div");
 commentsPosted.classList.add("comment__posted");
 joinConvo.appendChild(commentsPosted);
 
+//this function 
 function showAllComments(postsList) {
 
     commentsPosted.innerHTML = "";
 
-    for (let i = 0; i < postsList.length; i++) {
-        const postList = postsList[i];
-    
-        displayPostInfo(postList);
+    for (let i = 0; i < postsList.length; i++) { 
+        const postList = postsList[i]; //loops through the array and uses displayPostInfo functionality to create a comment section 
+                                        //that uses the array information
+        displayPostInfo(postList);      //so instead of looping through postsList, it should loop through the
     }    
 }
 

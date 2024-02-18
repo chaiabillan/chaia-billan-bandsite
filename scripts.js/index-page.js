@@ -1,20 +1,20 @@
-// const postsList = [
-//     {
-//         name: "Victor Pinto",
-//         date: "11/02/2023",
-//         comment: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains."
-//     },
-//     {
-//         name: "Christina Cabrera",
-//         date: "10/28/2023",
-//         comment: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day."
-//     },
-//     {
-//         name: "Isaac Tadesse",
-//         date: "10/20/2023",
-//         comment: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."
-//     }
-// ];
+const postsList = [
+    {
+        name: "Victor Pinto",
+        date: "11/02/2023",
+        comment: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains."
+    },
+    {
+        name: "Christina Cabrera",
+        date: "10/28/2023",
+        comment: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day."
+    },
+    {
+        name: "Isaac Tadesse",
+        date: "10/20/2023",
+        comment: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."
+    }
+];
 
 function showAllComments(postsList) {
 
@@ -30,14 +30,37 @@ function showAllComments(postsList) {
 const renderComments = async () => {
     try {
         const result = await apiClient.getComments();
-        console.log(result);
+        // console.log(result);
         return showAllComments(result);
     } catch(errors) {
         console.error(errors);
     }
-    
 }
 renderComments();
+
+
+
+// Function to add new comment
+const addNewComment = async (name, comment) => {
+    try {
+        const currentDate = new Date();
+        const formattedDate = formatDate(currentDate);
+
+        const newCommentData = {
+            name: name,
+            // date: formattedDate,
+            comment: comment
+        };
+
+        await apiClient.postComment(newCommentData);
+        renderComments();
+    } catch (error) {
+        console.error("Error adding new comment:", error);
+    }
+};
+
+// addNewComment("hi", "hi");
+// addNewComment("tester","testser");
 
 
 
@@ -124,9 +147,13 @@ addCommentForm.addEventListener("submit", (event) => {
 
     const name = event.target.name.value;
     const comment = event.target.comment.value;
+    // console.log(name);
+    // console.log(comment);
 
-    const currentDate = new Date();
-    const formattedDate = formatDate(currentDate); 
+
+
+    // const currentDate = new Date();
+    // const formattedDate = formatDate(currentDate); 
 
     if (name === "") {
         formErrors.innerText = "Name can not be empty";
@@ -139,14 +166,35 @@ addCommentForm.addEventListener("submit", (event) => {
 
     const newComment = {
         name: name, 
-        date: formattedDate, 
+        // date: formattedDate, 
         comment: comment
     }
+
+    const addNewComment = async () => {
+        try {
+            // const currentDate = new Date();
+            // const formattedDate = formatDate(currentDate);
+    
+            // const newCommentData = {
+            //     name: name,
+            //     // date: formattedDate,
+            //     comment: comment
+            // };
+    
+            await apiClient.postComment(newComment);
+            renderComments();
+        } catch (error) {
+            console.error("Error adding new comment:", error);
+        }
+    };
+
+    addNewComment();
 
     postsList.unshift(newComment);
 
     event.target.name.value = ""; 
     event.target.comment.value = ""; 
+
 
     showAllComments(postsList);
 });

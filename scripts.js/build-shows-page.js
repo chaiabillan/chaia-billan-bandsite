@@ -55,11 +55,25 @@ showsSection.appendChild(showLabelBigscreen);
     showLabelBigscreen.appendChild(showLabelBigscreenEach2);
     showLabelBigscreen.appendChild(showLabelBigscreenEach3);
 
-for (let i = 0; i < showsList.length; i++) {
-    const showList = showsList[i];
-    
-    displayShowInfo(showList);
+function displayAllShows() {
+    for (let i = 0; i < showsList.length; i++) {
+        const showList = showsList[i];
+        
+        displayShowInfo(showList);
+    }
 }
+
+const renderShows = async () => {
+    try {
+        const show = await apiClient.getShows();
+        console.log(show);
+        return displayAllShows(show);
+    } catch(errors) {
+        console.error(errors);
+    }
+}
+renderShows();
+
 
 function displayShowInfo(showList) {
     
@@ -75,7 +89,7 @@ function displayShowInfo(showList) {
     showLabel1.innerText = "DATE";
     
     const showInfo1 = document.createElement("p");
-    showInfo1.classList.add("show__info", "demi");
+    showInfo1.classList.add("show__info", "show__info--date", "demi");
     showInfo1.innerText = showList.DATE;
 
 
@@ -87,7 +101,7 @@ function displayShowInfo(showList) {
     showLabel2.innerText = "VENUE";
     
     const showInfo2 = document.createElement("p");
-    showInfo2.classList.add("show__info", "normal");
+    showInfo2.classList.add("show__info", "show__info--venue", "normal");
     showInfo2.innerText = showList.VENUE;
 
 
@@ -99,7 +113,7 @@ function displayShowInfo(showList) {
     showLabel3.innerText = "LOCATION";
 
     const showInfo3 = document.createElement("p");
-    showInfo3.classList.add("show__info", "normal");
+    showInfo3.classList.add("show__info", "show__info--location", "normal");
     showInfo3.innerText = showList.LOCATION;
 
 

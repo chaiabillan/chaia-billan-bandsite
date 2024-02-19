@@ -41,23 +41,23 @@ renderComments();
 
 
 // Function to add new comment
-const addNewComment = async (name, comment) => {
-    try {
-        const currentDate = new Date();
-        const formattedDate = formatDate(currentDate);
+// const addNewComment = async (name, comment) => {
+//     try {
+//         const currentDate = new Date();
+//         const formattedDate = formatDate(currentDate);
 
-        const newCommentData = {
-            name: name,
-            // date: formattedDate,
-            comment: comment
-        };
+//         const newCommentData = {
+//             name: name,
+//             // date: formattedDate,
+//             comment: comment
+//         };
 
-        await apiClient.postComment(newCommentData);
-        renderComments();
-    } catch (error) {
-        console.error("Error adding new comment:", error);
-    }
-};
+//         await apiClient.postComment(newCommentData);
+//         renderComments();
+//     } catch (error) {
+//         console.error("Error adding new comment:", error);
+//     }
+// };
 
 // addNewComment("hi", "hi");
 // addNewComment("tester","testser");
@@ -103,7 +103,7 @@ function displayPostInfo(postList) {
 
     const postInfoDate = document.createElement("p");
     postInfoDate.classList.add("posts__info--date", "normal");
-    postInfoDate.innerText = postList.date;
+    postInfoDate.innerText = postList.formattedDate;
 
     const postContent = document.createElement("div");
     postContent.classList.add("posts__content");
@@ -213,3 +213,4 @@ clearButton.addEventListener("click", function(event) {
 });
 
 commentsPosted.classList.remove("hide-comments");
+

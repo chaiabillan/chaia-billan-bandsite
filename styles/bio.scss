@@ -22,7 +22,6 @@ body {
 
             &--hover:hover {
                 padding-bottom: 23px; 
-                
             }
 
             &--biography {
@@ -78,8 +77,6 @@ body {
             color: $primary-white;
             position: absolute;
             @include page-header-section-header-mobile;
-            
-            
         }
     }
 
@@ -105,6 +102,7 @@ body {
         &__image {
             height: 39.25rem;
         }
+
         &__content {
             padding-left: 134px;
         }
@@ -168,7 +166,6 @@ body {
         padding-right: 87px;
 
         &__title {
-            
             @include section-header-desktop;
             padding-top: 48px;
             padding-bottom: 27px;

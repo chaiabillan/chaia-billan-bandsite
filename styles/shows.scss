@@ -43,6 +43,7 @@ main {
 
             &--biography {
                 font-family: 'Avenir Next Regular'; 
+                padding-bottom: 24px;
             }
 
             &--shows {
@@ -55,7 +56,6 @@ main {
     @include desktop {
 
         &__subheading {
-
 
             &--hover:hover {
                 padding-bottom: 45px; 
@@ -129,7 +129,6 @@ main {
 
         &__image {
             height: 30.3125rem;
-
         }
 
         &__content {
@@ -266,7 +265,6 @@ main {
             color: $primary-silver;
             margin: 0px;
             display: none;
-
         }
     }
 
@@ -280,7 +278,6 @@ main {
 
     &__button {
         height: 2.5rem;
-
 
         &--interior { 
             background-color: $primary-black;
@@ -301,7 +298,6 @@ main {
         margin-left: 16px;
         align-items: baseline;
         
-
         &__label {
             display: none;
 

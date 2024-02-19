@@ -58,6 +58,7 @@ main {
   }
   .nav-bar__subheading--biography {
     font-family: "Avenir Next Regular";
+    padding-bottom: 24px;
   }
   .nav-bar__subheading--shows {
     border-bottom: 3px white solid;

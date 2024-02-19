@@ -21,16 +21,14 @@ function showAllComments(postsList) {
     commentsPosted.innerHTML = "";
 
     for (let i = 0; i < postsList.length; i++) { 
-        const postList = postsList[i]; //loops through the array and uses displayPostInfo functionality to create a comment section 
-                                        //that uses the array information
-        displayPostInfo(postList);      //so instead of looping through postsList, it should loop through the
+        const postList = postsList[i]; 
+        displayPostInfo(postList);      
     }    
 }
 
 const renderComments = async () => {
     try {
         const result = await apiClient.getComments();
-        // console.log(result);
         return showAllComments(result);
     } catch(errors) {
         console.error(errors);
@@ -40,45 +38,12 @@ renderComments();
 
 
 
-// Function to add new comment
-// const addNewComment = async (name, comment) => {
-//     try {
-//         const currentDate = new Date();
-//         const formattedDate = formatDate(currentDate);
-
-//         const newCommentData = {
-//             name: name,
-//             // date: formattedDate,
-//             comment: comment
-//         };
-
-//         await apiClient.postComment(newCommentData);
-//         renderComments();
-//     } catch (error) {
-//         console.error("Error adding new comment:", error);
-//     }
-// };
-
-// addNewComment("hi", "hi");
-// addNewComment("tester","testser");
-
-
-
-
-//entire comment section 
 const joinConvo = document.querySelector(".join-convo");
 
-// this holds the previously posted(default) comments 
 const commentsPosted = document.createElement("div");
 commentsPosted.classList.add("comment__posted");
 joinConvo.appendChild(commentsPosted);
 
-
-
-//this function 
-
-
-// showAllComments(postsList);
 
 function displayPostInfo(postList) {
 
@@ -147,13 +112,6 @@ addCommentForm.addEventListener("submit", (event) => {
 
     const name = event.target.name.value;
     const comment = event.target.comment.value;
-    // console.log(name);
-    // console.log(comment);
-
-
-
-    // const currentDate = new Date();
-    // const formattedDate = formatDate(currentDate); 
 
     if (name === "") {
         formErrors.innerText = "Name can not be empty";
@@ -166,21 +124,11 @@ addCommentForm.addEventListener("submit", (event) => {
 
     const newComment = {
         name: name, 
-        // date: formattedDate, 
         comment: comment
     }
 
     const addNewComment = async () => {
         try {
-            // const currentDate = new Date();
-            // const formattedDate = formatDate(currentDate);
-    
-            // const newCommentData = {
-            //     name: name,
-            //     // date: formattedDate,
-            //     comment: comment
-            // };
-    
             await apiClient.postComment(newComment);
             renderComments();
         } catch (error) {

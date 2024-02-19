@@ -55,19 +55,20 @@ showsSection.appendChild(showLabelBigscreen);
     showLabelBigscreen.appendChild(showLabelBigscreenEach2);
     showLabelBigscreen.appendChild(showLabelBigscreenEach3);
 
-function displayAllShows() {
-    for (let i = 0; i < showsList.length; i++) {
-        const showList = showsList[i];
+
+function displayAllShows(shows) {
+    for (let i = 0; i < shows.length; i++) {
+        const show = shows[i];
         
-        displayShowInfo(showList);
+        displayShowInfo(show);
     }
 }
 
 const renderShows = async () => {
     try {
-        const show = await apiClient.getShows();
-        console.log(show);
-        return displayAllShows(show);
+        const shows = await apiClient.getShows();
+        console.log(shows);
+        return displayAllShows(shows);
     } catch(errors) {
         console.error(errors);
     }
@@ -90,7 +91,7 @@ function displayShowInfo(showList) {
     
     const showInfo1 = document.createElement("p");
     showInfo1.classList.add("show__info", "show__info--date", "demi");
-    showInfo1.innerText = showList.DATE;
+    showInfo1.innerText = formatDate(showList.date);
 
 
     const showVenue = document.createElement("div");
@@ -102,7 +103,7 @@ function displayShowInfo(showList) {
     
     const showInfo2 = document.createElement("p");
     showInfo2.classList.add("show__info", "show__info--venue", "normal");
-    showInfo2.innerText = showList.VENUE;
+    showInfo2.innerText = showList.place;
 
 
     const showLocation = document.createElement("div");
@@ -114,7 +115,7 @@ function displayShowInfo(showList) {
 
     const showInfo3 = document.createElement("p");
     showInfo3.classList.add("show__info", "show__info--location", "normal");
-    showInfo3.innerText = showList.LOCATION;
+    showInfo3.innerText = showList.location;
 
 
     const showButton = document.createElement("div");
@@ -138,4 +139,18 @@ function displayShowInfo(showList) {
     showLocation.appendChild(showInfo3);
     show.appendChild(showButton);
     showButton.appendChild(showButtonInterior);
+}
+
+
+function formatDate(dateString) {
+    const date = new Date(dateString);
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    
+    const dayOfWeek = days[date.getDay()];
+    const month = months[date.getMonth()];
+    const day = date.getDate();
+    const year = date.getFullYear();
+
+    return `${dayOfWeek} ${month} ${day} ${year}`;
 }
